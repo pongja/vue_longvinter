@@ -96,6 +96,7 @@ h1 img {
 .mobi_show {
   display: none;
 }
+
 @media screen and (max-width: 1060px) {
   .wrap_404 {
     transform: translate(-50%, -60%);

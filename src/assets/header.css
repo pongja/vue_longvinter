@@ -44,7 +44,7 @@
     font-weight: 500;
     transition: all 0.3s;
   }
-  .header .gnb li a.on {
+  .header .gnb li .router-link-active {
     color: white;
     font-weight: bold;
   }

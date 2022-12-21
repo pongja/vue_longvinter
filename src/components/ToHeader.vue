@@ -11,14 +11,14 @@
         <li>
           <router-link
             to="/"
-            class="on">
+            >
             롱빈터
           </router-link>
         </li>
         <li>
           <router-link
             to="/itempage">
-            롱빈터 아이템
+            롱빈터 도감
           </router-link>
         </li>
         <li>
