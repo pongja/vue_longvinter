@@ -93,9 +93,10 @@
           <p class="section-t1">
             지금바로 시작하세요.
           </p>
-          <p class="section-t2">
+          <p
+            class="section-t2">
             스팀에서 만나볼수있습니다.
-            https://store.steampowered.com/app/1635450/Longvinter/
+            <span @click="gosteam()">https://store.steampowered.com/app/1635450/Longvinter/</span>
           </p>
         </div>
       </div>
@@ -104,6 +105,9 @@
 </template>
 <script setup>
 
+const gosteam = () => {
+  window.location = 'https://store.steampowered.com/app/1635450/Longvinter/'
+}
 window.addEventListener('scroll', function(e) {
   scrollEvent(e)
 })

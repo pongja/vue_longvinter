@@ -3,6 +3,7 @@
     <div class="header_wrap">
       <p
         class="logo_p"
+        style="cursor:pointer;"
         @click="dashboard()">
         Longvinter Cafe
       </p>
@@ -16,7 +17,7 @@
         </li>
         <li>
           <router-link
-            to="/Service">
+            to="/itempage">
             롱빈터 아이템
           </router-link>
         </li>
@@ -26,7 +27,7 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/service_center/notice">
+          <router-link to="/Notice">
             공지사항
           </router-link>
         </li>
@@ -99,7 +100,7 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/Service">
+          <router-link to="/itempage">
             롱빈터 아이템
           </router-link>
         </li>
@@ -109,7 +110,7 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/service_center/notice">
+          <router-link to="/Notice">
             공지사항
           </router-link>
         </li>
@@ -139,7 +140,11 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-
+const dashboard = () =>{
+  router.push({
+    name: 'home'
+  })
+}
 const username = sessionStorage.getItem('user')
 //햄버거메뉴
 const remove = () => {
