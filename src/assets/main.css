@@ -103,12 +103,125 @@ a {
     font-weight: bold;
 }
 
+.mainsection {
+    width: auto;
+    display: grid;
+    gap: 120px;
+    margin-top: 50px;
+  }
+  .mainsection .section {
+      max-width: 1060px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 120px;
+      width: 100%;
+      margin: 0 auto;
+      align-items: center;
+  }
+  .animated {
+    animation-name: fadeInUp;
+    visibility: visible;
+    animation-fill-mode: both;
+    animation-duration: 3s;
+    animation-play-state: running;
+  }
+  .mainsection .section p {
+      color: #1B1B1E;
+  }
+  .section-t1 {
+    font-size: 36px;
+      font-weight: bold;
+      line-height: 1.3;
+      padding-bottom: 30px;
+      letter-spacing: -0.06em;
+  }
+  .section-t2 {
+    font-size: 20px;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: -1px;
+  }
+  .mobile {
+    display: block;
+  }
+  .sectimg1 {
+    background: url(../../public/images/map.jpg) no-repeat;
+      background-size: contain;
+      height: 480px;
+      width: 480px;
+  }
+  .sectimg2 {
+      background: url(../../public/images/map.jpg) no-repeat;
+      background-size: contain;
+      height: 480px;
+      width: 480px;
+  }
+  .sectimg3 {
+      background: url(../../public/images/map.jpg) no-repeat;
+      background-size: contain;
+      height: 480px;
+      width: 480px;
+  }
+  .sectimg4 {
+      background: url(../../public/images/map.jpg) no-repeat;
+      background-size: contain;
+      height: 480px;
+      width: 480px;
+  }
+  .sectimg5 {
+      background: url(../../public/images/map.jpg) no-repeat;
+      background-size: contain;
+      height: 480px;
+      width: 480px;
+  }
+  .sectimg6 {
+      background: url(../../public/images/map.jpg) no-repeat;
+      background-size: contain;
+      height: 480px;
+      width: 480px;
+  }
 
-
-#container {
-    max-width: 960px;
-    margin: 0 auto;
-
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 @media screen and (max-width: 1000px) {
     .mainSlider .tbox {
@@ -128,8 +241,73 @@ a {
         font-size: 24px;
         margin: 24px 0;
     }
-    #container {
-        max-width: none;
-        padding: 0 16px;
+    .mainsection .section {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .mainsection .order-grid {
+        order: 2;
+
+    }
+    .section-t1{
+        font-size: 34px;
+    }
+    .mainsection {
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+
+    }
+    .centerimg{
+        background-position: center;
+    }
+    .text-left{
+        text-align: left;
+    }
+    .text-right{
+        text-align: right;
+    }
+    .sectimg1{
+        width: auto;
+    }
+    .sectimg2{
+        width: auto;
+    }
+    .sectimg3{
+        width: auto;
+    }
+    .sectimg4{
+        width: auto;
+    }
+    .sectimg5{
+        width: auto;
+    }
+    .sectimg6{
+        width: auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .mainsection {
+        padding: 0 20px;
+    }
+    .section-t1{
+        font-size: 28px;
+        line-height: 32px;
+        padding-bottom: 10px;
+    }
+    .section-t2{
+        font-size: 16px;
+    }
+    .text-left{
+        text-align: center;
+    }
+    .text-right{
+        text-align: center;
+    }
+    .centerimg{
+        height: 300px;
     }
 }

@@ -136,9 +136,17 @@
 </template>
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const username = sessionStorage.getItem('user')
 //햄버거메뉴
+const remove = () => {
+  alert('로그아웃되었습니다')
+  sessionStorage.removeItem('user')
+  router.go()
+}
 const openmenu = ref(false)
 </script>
 <style scoped>
