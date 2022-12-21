@@ -6,7 +6,7 @@ header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, n
 small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video
 {border:0;font-size:100%;margin:0;padding:0;vertical-align:baseline;text-decoration: none;}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
-body {line-height:1; font-family: 'Pretendard', 'Noto Sans KR', sans-serif;}
+body {line-height:1; font-family: 'Pretendard', 'Noto Sans KR', sans-serif; margin: 0; padding: 0;}
 ol, ul {list-style:none}
 blockquote, q {quotes:none}
 blockquote:after, blockquote:before, q:after, q:before {content:"";content:none}
@@ -75,14 +75,4 @@ table {border-collapse:collapse;border-spacing:0}
   .login_go span:hover {
     text-decoration: underline;
   }
-
-
-
-
-
-
-
-
-
-
 }

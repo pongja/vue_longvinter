@@ -8,6 +8,9 @@ import ToHeader from '~/components/ToHeader.vue'
 import ToFooter from '~/components/ToFooter.vue'
 
 </script>
-<style scoped>
-
+<style>
+body{
+  margin: 0;
+  padding: 0;
+}
 </style>

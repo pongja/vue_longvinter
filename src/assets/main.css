@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+
+
+.desk_none {
+    display: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+.tbox-p {
+    font-size: 16px;
+    line-height: 1.4em;
+    color: #000000;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    margin-left: -480px;
+    max-width: 960px;
+    bottom: 15px;
+    /* margin: 0 auto; */
+    display: inline-block;
+}
+
+/*메인 배너 (슬라이드)*/
+#mainVisual {
+    padding-top: 0px;
+}
+
+.mainSlider {
+    width: 100%;
+    height: auto;
+}
+
+.mainSlider .msImg {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../public/images/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: 40% 30%;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.mainSlider .tbox {
+    position: relative;
+    color: #1B1B1E;
+    font-size: 16px;
+    max-width: 960px;
+    margin: 0px auto;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 8px 8px 10px 0 #00000033;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter:blur(10px);
+}
+.mainSlider .tbox .ms_text_wrap {
+    padding: 42px;
+}
+
+.ms_down_icon {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50% , 0);
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+.ms_down_icon:hover {
+    transform: translate(-50% , -3px);
+}
+.mainSlider h4 {
+    font-size: 35px;
+    line-height: 1.4;
+    margin: 30px 0;
+    font-weight: 400;
+    font-family: 'SBAggroB';
+}
+
+.mainSlider .boldspan {
+    font-weight: bold;
+}
+
+
+
+#container {
+    max-width: 960px;
+    margin: 0 auto;
+
+}
+@media screen and (max-width: 1000px) {
+    .mainSlider .tbox {
+        max-width:100%;
+        margin: 0 16px;
+    }
+    .mainSlider .tbox .ms_text_wrap {
+        padding: 32px 16px;
+    }
+    .mainSlider .tbox p {
+        line-height: 1.4;
+    }
+    .mainSlider .ms_text_wrap img {
+        width: 150px;
+    }
+    .mainSlider h4 {
+        font-size: 24px;
+        margin: 24px 0;
+    }
+    #container {
+        max-width: none;
+        padding: 0 16px;
+    }
+}
