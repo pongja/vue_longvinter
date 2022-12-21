@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* 공통 */
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite,
+code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6,
+header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section,
+small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video
+{border:0;font-size:100%;margin:0;padding:0;vertical-align:baseline;text-decoration: none;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+body {line-height:1; font-family: 'Pretendard', 'Noto Sans KR', sans-serif;}
+ol, ul {list-style:none}
+blockquote, q {quotes:none}
+blockquote:after, blockquote:before, q:after, q:before {content:"";content:none}
+table {border-collapse:collapse;border-spacing:0}
+
+
+
+/* hover */
+
+@media (hover: hover) {
+    .header .gnb li a:hover {
+        color: white;
+      }
+      .lang_wrap:hover .lang_list {
+        display: grid;
+      }
+      .header .lang_wrap .lang_list li a:hover {
+        color: white;
+      }
+
+    .guide_tab ul li:hover {
+        background: #0A085B;
+    }
+    .guide_tab ul li:hover a {
+        color: white;
+    }
+
+    .header .lang_wrap .lang_img:hover {
+        opacity: 1;
+    }
+    .service .service_wrap .add_btn:hover {
+        transform: translateY(-10px);
+    }
+    .section-banner .btn-flex button:hover {
+    color: #1B1B1E;
+    background-color: #FFFFFF;
+    border: 1px solid #1B1B1E;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 25%), 0 5px 5px rgb(0 0 0 / 22%);
+}
+    
+
+.sideContainer a:hover {
+    color: #000;
+  }
+  .box tbody tr:hover {
+    background: #fafafa59;
+  }
+  .box tbody tr td a:hover {
+    text-decoration:underline;
+  }
+  .td_title:hover {
+    text-decoration: underline;
+  }
+
+
+  .del_btn:hover,
+  .edit_btn:hover  {
+    color: #333;
+    background:white;
+  }
+  .writing_btn:hover {
+    background: white;
+    color: #1B1B1E;
+  }
+
+  .login_go span:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+
+
+
+
+
+
+}
