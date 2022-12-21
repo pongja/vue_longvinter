@@ -180,7 +180,12 @@ a {
       height: 480px;
       width: 480px;
   }
-
+  .steamfont{
+    font-size: 19px;
+  }
+  .mainsection .section.bottomsection{
+    margin-bottom: 100px;
+  }
 @keyframes fadeInUp {
     0% {
         opacity: 0;

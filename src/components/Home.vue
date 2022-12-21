@@ -86,7 +86,7 @@
         <div class="sectimg5 centerimg">
         </div>
       </div>
-      <div class="section animatable">
+      <div class="section animatable bottomsection">
         <div class="sectimg6 centerimg">
         </div>
         <div class="section-text text-right">
@@ -96,7 +96,10 @@
           <p
             class="section-t2">
             스팀에서 만나볼수있습니다.
-            <span @click="gosteam()">https://store.steampowered.com/app/1635450/Longvinter/</span>
+            <span
+              class="steamfont"
+              style="cursor: pointer;"
+              @click="gosteam()">https://store.steampowered.com/app/1635450/Longvinter/</span>
           </p>
         </div>
       </div>
