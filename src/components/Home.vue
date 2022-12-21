@@ -95,7 +95,7 @@
           </p>
           <p
             class="section-t2">
-            스팀에서 만나볼수있습니다.
+            스팀에서 만나볼수있습니다.<br />
             <span
               class="steamfont"
               style="cursor: pointer;"

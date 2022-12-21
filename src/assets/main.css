@@ -299,12 +299,13 @@ a {
         padding: 0 20px;
     }
     .section-t1{
-        font-size: 28px;
+        font-size: 26px;
         line-height: 32px;
         padding-bottom: 10px;
     }
     .section-t2{
-        font-size: 16px;
+        font-size: 15px;
+        word-break: keep-all;
     }
     .text-left{
         text-align: center;
@@ -315,4 +316,11 @@ a {
     .centerimg{
         height: 300px;
     }
+    .steamfont{
+        font-size: 18px;
+        word-break: break-all;
+    }
+}
+@media screen and (max-width: 400px) {
+    
 }
