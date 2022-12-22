@@ -80,7 +80,7 @@ const WidthmobileActive = ref(true)
 const WidthmobilePostion  = ref(0)
 
 window.addEventListener('resize', () => {
-  WidthmobileActive.value = WidthmobilePostion.value > 590
+  WidthmobileActive.value = WidthmobilePostion.value > 589
   WidthmobilePostion.value = window.innerWidth
 })
  window.addEventListener('resize', () => {
