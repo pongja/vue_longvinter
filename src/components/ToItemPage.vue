@@ -37,7 +37,7 @@
 />
       <YouTube
         src="https://youtu.be/GQmO52f26Ws"
-        width="540" 
+        width="500" 
         height="300" />
     </div>
     <div
@@ -53,7 +53,7 @@
 />
       <YouTube
         src="https://youtu.be/GQmO52f26Ws"
-        width="280" 
+        width="220" 
         height="auto" 
         class="youtube_padding" />
     </div>
@@ -80,7 +80,7 @@ const WidthmobileActive = ref(true)
 const WidthmobilePostion  = ref(0)
 
 window.addEventListener('resize', () => {
-  WidthmobileActive.value = WidthmobilePostion.value > 589
+  WidthmobileActive.value = WidthmobilePostion.value > 590
   WidthmobilePostion.value = window.innerWidth
 })
  window.addEventListener('resize', () => {
