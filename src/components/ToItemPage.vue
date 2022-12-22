@@ -30,6 +30,11 @@
       <h3 class="youtube_title">
         공식영상
       </h3>
+      <component 
+  is="script" 
+  id="youtube-iframe-js-api-script"
+  src="https://www.youtube.com/iframe_api"
+/>
       <YouTube
         src="https://youtu.be/GQmO52f26Ws"
         width="540" 
@@ -41,6 +46,11 @@
       <h3 class="youtube_title">
         공식영상
       </h3>
+      <component 
+  is="script" 
+  id="youtube-iframe-js-api-script"
+  src="https://www.youtube.com/iframe_api"
+/>
       <YouTube
         src="https://youtu.be/GQmO52f26Ws"
         width="280" 
@@ -63,10 +73,10 @@ import { Carousel, Slide,Navigation } from 'vue3-carousel'
 import YouTube from 'vue3-youtube'
 import { ref } from 'vue'
 
-const WidthActive = ref(true)
+const WidthActive = ref(false)
 const WidthPostion  = ref(0)
 //모바일
-const WidthmobileActive = ref(false)
+const WidthmobileActive = ref(true)
 const WidthmobilePostion  = ref(0)
 
 window.addEventListener('resize', () => {
@@ -74,7 +84,7 @@ window.addEventListener('resize', () => {
   WidthmobilePostion.value = window.innerWidth
 })
  window.addEventListener('resize', () => {
-    WidthActive.value = WidthPostion.value < 591
+    WidthActive.value = WidthPostion.value < 590
     WidthPostion.value = window.innerWidth
 })
 const slides = [
