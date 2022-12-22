@@ -131,6 +131,21 @@ const slides = [
   margin-bottom: 0;
 }
 @media screen and (max-width:768px) {
-
+  .youtube_container {
+    display: none;
+  }
+  .footer {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width:500px){
+  .slideimg{
+    height: 300px;
+  }
+}
+@media screen and (max-width:375px){
+  .slideimg{
+    height: 200px;
+  }
 }
 </style>
