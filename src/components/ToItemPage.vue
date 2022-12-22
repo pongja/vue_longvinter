@@ -84,7 +84,7 @@ window.addEventListener('resize', () => {
   WidthmobilePostion.value = window.innerWidth
 })
  window.addEventListener('resize', () => {
-    WidthActive.value = WidthPostion.value < 591
+    WidthActive.value = WidthPostion.value < 590
     WidthPostion.value = window.innerWidth
 })
 const slides = [
