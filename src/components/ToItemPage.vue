@@ -24,13 +24,28 @@
         </template>
       </Carousel>
     </div>
-    <div class="youtube_container">
+    <div
+      class="youtube_container"
+      :class="{'youtube_container on' : WidthActive}">
       <h3 class="youtube_title">
         공식영상
       </h3>
       <YouTube
-        src="https://youtu.be/GQmO52f26Ws" 
-        class="youtube" />
+        src="https://youtu.be/GQmO52f26Ws"
+        width="540" 
+        height="360" />
+    </div>
+    <div
+      class="youtube_container_mobile"
+      :class="{'youtube_container_mobile on' : WidthmobileActive}">
+      <h3 class="youtube_title">
+        공식영상
+      </h3>
+      <YouTube
+        src="https://youtu.be/GQmO52f26Ws"
+        width="280" 
+        height="300" 
+        class="youtube_padding" />
     </div>
   </div>
   <div class="footer">
@@ -46,9 +61,22 @@
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide,Navigation } from 'vue3-carousel'
 import YouTube from 'vue3-youtube'
+import { ref } from 'vue'
 
+const WidthActive = ref(true)
+const WidthPostion  = ref(0)
+//모바일
+const WidthmobileActive = ref(false)
+const WidthmobilePostion  = ref(0)
 
-
+window.addEventListener('resize', () => {
+  WidthmobileActive.value = WidthmobilePostion.value > 590
+  WidthmobilePostion.value = window.innerWidth
+})
+ window.addEventListener('resize', () => {
+    WidthActive.value = WidthPostion.value < 591
+    WidthPostion.value = window.innerWidth
+})
 const slides = [
   { id: 1, src: 'home.png' },
   { id: 2, src: 'hillring.png'  },
@@ -73,26 +101,46 @@ const slides = [
   background-color: white;
 
 }
-.youtube {
-  margin: 0 auto;
-}
 .youtube_title{
   text-align: center;
   font-size: 25px;
 }
 .youtube_container{
-  max-width: 960px;
+  width: 100%;
   margin: 0 auto;
+  min-height: 200px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.youtube_container.on{
+  display: none;
+}
+.youtube_padding{
+  padding-left: 50px;
+  padding-right: 50px;
 }
 .slideimg{
   width: 100%;
   height: 400px;
-  border-radius: 40px;
+  border-radius: 80px;
+  padding: 20px;
+}
+.youtube_container_mobile{
+  width: 100%;
+  margin: 0 auto;
+  min-height: 200px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.youtube_container_mobile.on{
+  display: none;
 }
 .container {
   max-width: 960px;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 200px;
   padding: 100px 16px 0px 16px;
 }
 .info_long{
@@ -110,8 +158,6 @@ const slides = [
   /* position: absolute;
   bottom: 0; */
 }
-
-
 
 .footer .footer_wrap {
   max-width: 1400px;
@@ -131,16 +177,20 @@ const slides = [
   margin-bottom: 0;
 }
 @media screen and (max-width:768px) {
-  .youtube_container {
+  .container{
+    height: 100vh;
+  }
+}
+@media screen and (max-width:560px) {
+   /* .youtube_container {
     display: none;
-  }
-  .footer {
-    margin-top: 0;
-  }
+  } */
 }
 @media screen and (max-width:500px){
   .slideimg{
     height: 300px;
+    padding: 5px;
+    border-radius: 40px;
   }
 }
 @media screen and (max-width:375px){
