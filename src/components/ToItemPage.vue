@@ -1,11 +1,18 @@
 <template>
   <div class="container">
     <div class="fish_item">
-      <Carousel :wrap-around="true" :breakpoints="breakpoints" :autoplay="3000">
-        <Slide v-for="slide in slides" :key="slide.id">
+      <Carousel
+        :wrap-around="true"
+        :breakpoints="breakpoints"
+        :autoplay="5000">
+        <Slide
+          v-for="slide in slides"
+          :key="slide.id">
           <div class="carousel__item">
-            <h3>{{ slide.title }}</h3>
-            <p>{{ slide.content }}</p>
+            <h3></h3>
+            <img
+              :src="`/images/${slide.src}`"
+              class="slideimg" />
           </div>
         </Slide>
 
@@ -15,6 +22,7 @@
         </template>
       </Carousel>
     </div>
+    <YouTube url="https://youtu.be/GQmO52f26Ws" />
   </div>
   <div class="footer">
     <div class="footer_wrap">
@@ -28,13 +36,13 @@
 <script setup>
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import YouTube from 'vue3-youtube'
+
 
 const slides = [
-  { id: 1, title: 'Vue 3 Introduction', content: 'VueJS is a library'},
-  { id: 2, title: 'Vue 3 Components', content: 'Know the components' },
-  { id: 3, title: 'Vue 3 Components', content: 'Know the components' },
-  { id: 4, title: 'Vue 3 Components', content: 'Know the components' },
-  { id: 5, title: 'Vue 3 Components', content: 'Know the components' },
+  { id: 1, src: 'home.png' },
+  { id: 2, src: 'hillring.png'  },
+  { id: 3, src: 'fishing.png'  },
 ]
 </script>
 <style scoped>
@@ -58,13 +66,17 @@ const slides = [
   box-sizing: content-box;
   border: 5px solid white;
   background-color: white;
-}
 
+}
+.slideimg{
+  width: 100%;
+  height: 400px;
+}
 .container {
   max-width: 960px;
   margin: 0 auto;
   height: 100vh;
-  padding-top: 150px;
+  padding-top: 200px;
 }
 
 /* footer */

@@ -10,15 +10,14 @@
       <ul class="gnb">
         <li>
           <router-link
-            to="/"
-            >
+            to="/">
             롱빈터
           </router-link>
         </li>
         <li>
           <router-link
             to="/itempage">
-            롱빈터 도감
+            롱빈터 정보
           </router-link>
         </li>
         <li>
@@ -101,7 +100,7 @@
         </li>
         <li>
           <router-link to="/itempage">
-            롱빈터 아이템
+            롱빈터 정보
           </router-link>
         </li>
         <li>

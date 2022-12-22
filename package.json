@@ -11,7 +11,8 @@
     "vue": "^3.2.45",
     "vue-carousel": "^0.18.0",
     "vue-router": "^4.1.6",
-    "vue3-carousel": "^0.2.9"
+    "vue3-carousel": "^0.2.9",
+    "vue3-youtube": "^0.1.9"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
