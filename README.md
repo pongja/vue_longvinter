@@ -1,6 +1,6 @@
 # vue_longvinter
 
-This template should help get you started developing with Vue 3 in Vite.
+롱빈터 스팀게임 웹사이트 포트폴리오
 
 ## Recommended IDE Setup
 
