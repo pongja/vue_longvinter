@@ -38,7 +38,7 @@
       <YouTube
         src="https://youtu.be/GQmO52f26Ws"
         width="540" 
-        height="360" />
+        height="300" />
     </div>
     <div
       class="youtube_container_mobile"
@@ -54,7 +54,7 @@
       <YouTube
         src="https://youtu.be/GQmO52f26Ws"
         width="280" 
-        height="300" 
+        height="auto" 
         class="youtube_padding" />
     </div>
   </div>
@@ -84,7 +84,7 @@ window.addEventListener('resize', () => {
   WidthmobilePostion.value = window.innerWidth
 })
  window.addEventListener('resize', () => {
-    WidthActive.value = WidthPostion.value < 590
+    WidthActive.value = WidthPostion.value < 591
     WidthPostion.value = window.innerWidth
 })
 const slides = [
@@ -122,13 +122,10 @@ const slides = [
   display: grid;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .youtube_container.on{
   display: none;
-}
-.youtube_padding{
-  padding-left: 50px;
-  padding-right: 50px;
 }
 .slideimg{
   width: 100%;
@@ -187,9 +184,7 @@ const slides = [
   margin-bottom: 0;
 }
 @media screen and (max-width:768px) {
-  .container{
-    height: 100vh;
-  }
+  
 }
 @media screen and (max-width:560px) {
    /* .youtube_container {
