@@ -87,6 +87,9 @@ a {
     cursor: pointer;
     border: none;
 }
+.ms_down_icon  a{
+    display: block;
+}
 .ms_down_icon:hover {
     transform: translate(-50% , -3px);
 }
@@ -227,9 +230,13 @@ a {
     }
 }
 @media screen and (max-width: 1000px) {
-    .ms_down_icon a{
+    .ms_down_icon{
         width: 45px;
         height: 45px;
+    }
+    .ms_down_icon a{
+        width: 48px;
+        height: 48px;
     }
     .mainSlider .tbox {
         max-width:100%;

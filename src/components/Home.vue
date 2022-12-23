@@ -17,7 +17,7 @@
           <button
             type="button"
             class="ms_down_icon">
-            <a href="#section_top" style="display:block"><img
+            <a href="#section_top"><img
               src="../../public/images/down-circle-outline.svg"
               alt="down_icon" /></a>
           </button>
@@ -174,8 +174,6 @@ const setScreenSize =() => {
   display: flex;
   align-items: center;
   background: #1B1B1E;
-  /* position: absolute;
-  bottom: 0; */
  }
  .footer .footer_wrap {
   max-width: 1400px;
