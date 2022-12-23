@@ -21,6 +21,82 @@
         </Slide>
       </Carousel>
     </div>
+    <div class="info_container">
+      <div class="info_box">
+        <h2>
+          Longvinter
+        </h2>
+        <img
+          class="info_img"
+          src="../../public/images/longvinter.png" />
+        <div class="info_grid_line">
+          <div class="info_grid">
+            <div class="frist_align">
+              개발
+            </div>
+            <div class="sec_align">
+              Uuvana Studios
+            </div>
+          </div>
+          <div class="info_grid">
+            <div class="frist_align">
+              유통
+            </div>
+            <div class="sec_align">
+              Uuvana Studios
+            </div>
+          </div>
+          <div class="info_grid">
+            <div class="frist_align">
+              운영체제
+            </div>
+            <div class="sec_align windows">
+              Windows
+            </div>
+          </div>
+          <div class="info_grid">
+            <div class="frist_align">
+              플랫폼
+            </div>
+            <div class="sec_align steam">
+              Steam
+            </div>
+          </div>
+          <div class="info_grid">
+            <div class="frist_align">
+              장르
+            </div>
+            <div class="sec_align">
+              생존, 크래프팅, 샌드박스, 멀티플레이
+            </div>
+          </div>
+          <div class="info_grid">
+            <div class="frist_align">
+              엔진
+            </div>
+            <div class="sec_align">
+              언리얼 엔진4
+            </div>
+          </div>
+          <div class="info_grid">
+            <div class="frist_align">
+              한국어 지원
+            </div>
+            <div class="sec_align">
+              공식 지원
+            </div>
+          </div>
+          <div class="info_grid">
+            <div class="frist_align">
+              현재 버전
+            </div>
+            <div class="sec_align">
+              Beta 1.0.9
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div
       class="youtube_container"
       :class="{'youtube_container on' : WidthActive}">
@@ -39,7 +115,7 @@
         공식영상
       </h3>
       <component 
-        is="script" 
+        :is="script" 
         id="youtube-iframe-js-api-script"
         src="https://www.youtube.com/iframe_api" />
       <YouTube
@@ -100,16 +176,56 @@ const slides = [
   align-items: center;
   
 }
-.carousel__prev,
-.carousel__next {
-  box-sizing: content-box;
-  border: 5px solid white;
-  background-color: white;
-  color: #FFFFFF;
-  display: block
+.info_container{
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info_grid_line{
+  line-height: 1.5;
+}
+.sec_align{
+  padding-left: 10px;
+}
+.windows{
+  color: #0080FF;
+}
+.steam{
+  color:#151515;
+  font-weight: bold;
+}
+.info_box{
+  margin: 0 auto;
+  box-shadow: 2px 2px 15px -3px #777;
+  padding: 10px;
+  max-width: 600px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.frist_align{
+  text-align: center;
+}
+.info_box h2{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 26px;
+}
+.info_grid{
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  height: 50px;
+  align-items: center;
 }
 .fish_item{
   border-radius: 40px;
+  
+}
+.info_img{
+  width: 568px;
+  height: auto;
 }
 .youtube_title{
   text-align: center;
@@ -132,6 +248,7 @@ const slides = [
   height: 400px;
   border-radius: 80px;
   padding: 20px;
+  
 }
 .youtube_container_mobile{
   width: 100%;
@@ -184,7 +301,15 @@ const slides = [
   margin-bottom: 0;
 }
 @media screen and (max-width:768px) {
-  
+  .info_img{
+    width: 100%;
+  }
+  .info_container{
+    margin: 50px 0;
+  }
+  .info_box{
+    width: 100%;
+  }
 }
 @media screen and (max-width:560px) {
    /* .youtube_container {

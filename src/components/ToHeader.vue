@@ -27,7 +27,7 @@
         </li>
         <li>
           <router-link to="/Notice">
-            공지사항
+            커뮤니티
           </router-link>
         </li>
       </ul>
@@ -110,7 +110,7 @@
         </li>
         <li>
           <router-link to="/Notice">
-            공지사항
+            커뮤니티
           </router-link>
         </li>
         <div class="lang_wrap">

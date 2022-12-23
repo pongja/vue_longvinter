@@ -115,10 +115,13 @@
   </div>
 </template>
 <script setup>
+import { watch } from 'vue'
+
 
 const gosteam = () => {
   window.location = 'https://store.steampowered.com/app/1635450/Longvinter/'
 }
+watch(()=>{
 window.addEventListener('scroll', function(e) {
   scrollEvent(e)
 })
@@ -132,6 +135,7 @@ Array.prototype.forEach.call(itemList, function(section){
   }
 })
 }
+})
 </script>
 <style scoped>
 @import "~/assets/main.css";
