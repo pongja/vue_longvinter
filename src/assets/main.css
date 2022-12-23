@@ -144,6 +144,9 @@ a {
   .mobile {
     display: block;
   }
+  #section_top{
+    display: block;
+  }
   .sectimg1 {
     background: url(../../public/images/map.jpg) no-repeat;
       background-size: contain;

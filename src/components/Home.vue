@@ -17,7 +17,7 @@
           <button
             type="button"
             class="down_arrow">
-            <a href="#section_top"><img
+            <a @click="section_top()" ><img
               src="../../public/images/down_arrow.svg"
               alt="down_icon" /></a>
           </button>
@@ -122,7 +122,9 @@
 <script setup>
 import { watchEffect,ref,onMounted } from 'vue'
 
-
+const section_top = () =>{
+  window.location.href = '#section_top'
+}
 const scrollActive = ref(false)
 const scrollPostion  = ref(0)
 onMounted(()=>{
