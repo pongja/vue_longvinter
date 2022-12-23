@@ -120,7 +120,7 @@
   </div>
 </template>
 <script setup>
-import { watchEffect,ref,onMounted,watch } from 'vue'
+import { watchEffect,ref,onMounted } from 'vue'
 
 
 const scrollActive = ref(false)
@@ -142,7 +142,6 @@ const toTop = () => {
 const gosteam = () => {
   window.location = 'https://store.steampowered.com/app/1635450/Longvinter/'
 }
-watch(disableScroll,removeEvent,enableScroll)
 watchEffect(()=>{
 window.addEventListener('scroll', function(e) {
 scrollEvent(e)
@@ -162,22 +161,6 @@ const setScreenSize =() => {
   const vh = window.innerHeight * 0.01
 
   document.documentElement.style.setProperty('--vh', `${vh}px`)
-}
-const disableScroll = () => {
-    document.querySelector('body').addEventListener('touchmove', this.removeEvent, { passive: false })
-    document.querySelector('body').addEventListener('onclick', this.removeEvent, { passive: false })
-    document.querySelector('body').addEventListener('mousewheel', this.removeEvent, { passive: false })
-  }
-
-const  removeEvent = e => {
-    e.preventDefault()
-    e.stopPropagation()
-  }
-
- const enableScroll = () => {
-    document.querySelector('body').removeEventListener('touchmove', this.removeEvent)
-    document.querySelector('body').removeEventListener('onclick', this.removeEvent)
-    document.querySelector('body').removeEventListener('mousewheel', this.removeEvent)
 }
 </script>
 <style scoped>
