@@ -138,7 +138,7 @@
               <img
                 src="../../public/images/4.PNG"
                 class="brid_img" />
-              <p>공작새 : 맵 하단 외딴 섬 지역에서 많이 발견할 수 있다.</p>
+              <p>공작새 : 맵 하단 외딴 섬 지역에서 발견할 수 있다.</p>
             </div>
             <div
               v-else
