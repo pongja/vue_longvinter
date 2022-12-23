@@ -37,7 +37,7 @@
               v-if="pheasant"
               class="flex_pimg">
               <img
-                src="../../public/images/pheasant.png"
+                src="../../public/images/1.png"
                 class="brid_img" />
               <p>닭 : 흔하게 들판에서 많이 발견할 수 있다.</p>
             </div>
@@ -70,7 +70,7 @@
               v-if="grouse"
               class="flex_pimg">
               <img
-                src="../../public/images/grouse.png"
+                src="../../public/images/2.PNG"
                 class="brid_img" />
               <p>뇌조  : 설원지역에서 발견할 수 있다.</p>
             </div>
@@ -103,7 +103,7 @@
               v-if="biggrouse"
               class="flex_pimg">
               <img
-                src="../../public/images/biggrouse.png"
+                src="../../public/images/3.PNG"
                 class="brid_img" />
               <p>큰 뇌조  : 설원지역과 사막지역 맵상단에서 발견할 수 있다.</p>
             </div>
@@ -136,7 +136,7 @@
               v-if="peacock"
               class="flex_pimg">
               <img
-                src="../../public/images/peacock.png"
+                src="../../public/images/4.PNG"
                 class="brid_img" />
               <p>공작새 : 맵 하단 외딴 섬 지역에서 많이 발견할 수 있다.</p>
             </div>
@@ -341,9 +341,14 @@ const toTop = () => {
   }
  
 const slides = [
-  { id: 1, src: 'home.png' },
+  { id: 1, src: 'sun1.png' },
   { id: 2, src: 'hillring.png'  },
-  { id: 3, src: 'fishing.png'  },
+  { id: 3, src: 'sun2.png'  },
+  { id: 4, src: 'fishing.png' },
+  { id: 5, src: 'sun4.png'  },
+  { id: 6, src: 'sun3.png'  },
+  { id: 7, src: 'home.png'  },
+
 ]
 </script>
 <style scoped>
