@@ -551,6 +551,12 @@ const slides = [
   .youtube_container_mobile{
     padding-top: 150px;
   }
+  .flex_pimg p{
+    font-size: 16px;
+  }
+  .flex_else p{
+   font-size: 16px;
+  }
 }
 @media screen and (max-width:560px) {
    /* .youtube_container {
@@ -558,6 +564,12 @@ const slides = [
   } */
   .bird_div{
     padding: 0 30px;
+  }
+   .flex_pimg p{
+    font-size: 14px;
+  }
+  .flex_else p{
+   font-size: 14px;
   }
 }
 @media screen and (max-width:500px){
