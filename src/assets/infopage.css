@@ -36,6 +36,7 @@
 }
 .grid_img_p{
   display: grid;
+  align-items: center;
   grid-template-columns: 80px 1fr;
 }
 .brid_btn{

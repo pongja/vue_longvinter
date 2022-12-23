@@ -37,7 +37,7 @@
               v-if="pheasant"
               class="flex_pimg">
               <img
-                src="../../public/images/bird1.png"
+                src="../../public/images/bird1.jpg"
                 class="brid_img" />
               <p>닭 : 흔하게 들판에서 많이 발견할 수 있다.</p>
             </div>
@@ -46,13 +46,13 @@
               class="flex_else">
               <div class="grid_img_p">
                 <img
-                  src="../../public/images/pheasant.png"
+                  src="../../public/images/pheasant.jpg"
                   class="brid_img" />
                 <p>닭을 사냥하면 자주발견되는 깃털아이템</p>
               </div>
               <div class="grid_img_p"> 
                 <img
-                  src="../../public/images/pheasant2.png"
+                  src="../../public/images/pheasant2.jpg"
                   class="brid_img" />
                 <p>닭을 사냥하면 간헐적으로 발견되는 깃털아이템</p>
               </div>  
@@ -70,7 +70,7 @@
               v-if="grouse"
               class="flex_pimg">
               <img
-                src="../../public/images/bird2.png"
+                src="../../public/images/bird2.jpg"
                 class="brid_img" />
               <p>뇌조  : 설원지역에서 발견할 수 있다.</p>
             </div>
@@ -79,13 +79,13 @@
               class="flex_else">
               <div class="grid_img_p">
                 <img
-                  src="../../public/images/grouse.png"
+                  src="../../public/images/grouse.jpg"
                   class="brid_img" />
                 <p>뇌조를 사냥하면 자주발견되는 깃털아이템</p>
               </div>
               <div class="grid_img_p"> 
                 <img
-                  src="../../public/images/grouse2.png"
+                  src="../../public/images/grouse2.jpg"
                   class="brid_img" />
                 <p>뇌조를 사냥하면 간헐적으로 발견되는 깃털아이템</p>
               </div>  
@@ -103,7 +103,7 @@
               v-if="biggrouse"
               class="flex_pimg">
               <img
-                src="../../public/images/bird3.png"
+                src="../../public/images/bird3.jpg"
                 class="brid_img" />
               <p>큰 뇌조  : 설원지역과 사막지역 맵상단에서 발견할 수 있다.</p>
             </div>
@@ -112,13 +112,13 @@
               class="flex_else">
               <div class="grid_img_p">
                 <img
-                  src="../../public/images/biggrouse.png"
+                  src="../../public/images/biggrouse.jpg"
                   class="brid_img" />
                 <p>큰 뇌조를 사냥하면 자주발견되는 깃털아이템</p>
               </div>
               <div class="grid_img_p"> 
                 <img
-                  src="../../public/images/biggrouse2.png"
+                  src="../../public/images/biggrouse2.jpg"
                   class="brid_img" />
                 <p>큰 뇌조를 사냥하면 간헐적으로 발견되는 깃털아이템</p>
               </div>  
@@ -136,7 +136,7 @@
               v-if="peacock"
               class="flex_pimg">
               <img
-                src="../../public/images/bird4.png"
+                src="../../public/images/bird4.jpg"
                 class="brid_img" />
               <p>공작새 : 맵 하단 외딴 섬 지역에서 발견할 수 있다.</p>
             </div>
@@ -145,13 +145,13 @@
               class="flex_else">
               <div class="grid_img_p">
                 <img
-                  src="../../public/images/peacock.png"
+                  src="../../public/images/peacock.jpg"
                   class="brid_img" />
                 <p>공작새를 사냥하면 자주발견되는 깃털아이템</p>
               </div>
               <div class="grid_img_p"> 
                 <img
-                  src="../../public/images/peacock2.png"
+                  src="../../public/images/peacock2.jpg"
                   class="brid_img" />
                 <p>공작새를 사냥하면 간헐적으로 발견되는 깃털아이템</p>
               </div>  
