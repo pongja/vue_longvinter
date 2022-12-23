@@ -227,6 +227,10 @@ a {
     }
 }
 @media screen and (max-width: 1000px) {
+    .ms_down_icon a{
+        width: 45px;
+        height: 45px;
+    }
     .mainSlider .tbox {
         max-width:100%;
         margin: 0 16px;

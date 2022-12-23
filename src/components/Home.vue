@@ -19,7 +19,7 @@
             class="ms_down_icon">
             <a href="#section_top" style="display:block"><img
               src="../../public/images/down-circle-outline.svg"
-              alt="down_ic.title-div[data-v-08e32229]on" /></a>
+              alt="down_icon" /></a>
           </button>
         </div>
       </div>
