@@ -9,11 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
 
 
-body{
-  position: fixed;
-  overflow: hidden;
-  touch-action: none;
-}
+
 .desk_none {
     display: none;
 }
@@ -323,6 +319,12 @@ a {
         word-break: break-all;
     }
 }
-@media screen and (max-width: 400px) {
-    
+@media screen and (max-width: 560px) {
+    .mainsection{
+        gap: 120px;
+    }
+    .mainsection .section{
+        height: auto;
+        gap: 30px;
+    }
 }
