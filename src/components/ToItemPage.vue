@@ -5,6 +5,7 @@
     </h3>
     <div class="fish_item">
       <Carousel
+        id="Carouselcss"
         :wrap-around="true"
         :breakpoints="breakpoints"
         :autoplay="5000">
@@ -18,10 +19,6 @@
               class="slideimg" />
           </div>
         </Slide>
-
-        <template #addons>
-          <Navigation />
-        </template>
       </Carousel>
     </div>
     <div
@@ -30,11 +27,6 @@
       <h3 class="youtube_title">
         공식영상
       </h3>
-      <component 
-  is="script" 
-  id="youtube-iframe-js-api-script"
-  src="https://www.youtube.com/iframe_api"
-/>
       <YouTube
         src="https://youtu.be/GQmO52f26Ws"
         width="500" 
@@ -47,10 +39,9 @@
         공식영상
       </h3>
       <component 
-  is="script" 
-  id="youtube-iframe-js-api-script"
-  src="https://www.youtube.com/iframe_api"
-/>
+        is="script" 
+        id="youtube-iframe-js-api-script"
+        src="https://www.youtube.com/iframe_api" />
       <YouTube
         src="https://youtu.be/GQmO52f26Ws"
         width="220" 
@@ -69,24 +60,27 @@
 </template>
 <script setup>
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide,Navigation } from 'vue3-carousel'
+import { Carousel, Slide } from 'vue3-carousel'
 import YouTube from 'vue3-youtube'
-import { ref } from 'vue'
+import { ref,watchEffect } from 'vue'
 
 const WidthActive = ref(false)
-const WidthPostion  = ref(0)
+
 //모바일
 const WidthmobileActive = ref(true)
-const WidthmobilePostion  = ref(0)
 
-window.addEventListener('resize', () => {
-  WidthmobileActive.value = WidthmobilePostion.value > 590
-  WidthmobilePostion.value = window.innerWidth
+
+watchEffect(()=>{
+  window.addEventListener('resize', () => {
+  WidthmobileActive.value = window.innerWidth > 590
+  
+  })
+  window.addEventListener('resize', () => {
+    WidthActive.value =  window.innerWidth < 590
 })
- window.addEventListener('resize', () => {
-    WidthActive.value = WidthPostion.value < 590
-    WidthPostion.value = window.innerWidth
 })
+
+ 
 const slides = [
   { id: 1, src: 'home.png' },
   { id: 2, src: 'hillring.png'  },
@@ -94,6 +88,7 @@ const slides = [
 ]
 </script>
 <style scoped>
+
 .carousel__item {
   min-height: 200px;
   width: 100%;
@@ -103,13 +98,18 @@ const slides = [
   border-radius: 8px;
   justify-content: center;
   align-items: center;
+  
 }
 .carousel__prev,
 .carousel__next {
   box-sizing: content-box;
   border: 5px solid white;
   background-color: white;
-
+  color: #FFFFFF;
+  display: block
+}
+.fish_item{
+  border-radius: 40px;
 }
 .youtube_title{
   text-align: center;

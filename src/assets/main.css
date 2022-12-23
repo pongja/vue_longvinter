@@ -106,14 +106,13 @@ a {
 .mainsection {
     width: auto;
     display: grid;
-    gap: 120px;
-    margin-top: 50px;
   }
   .mainsection .section {
       max-width: 1060px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 120px;
+      height: 100vh;
       width: 100%;
       margin: 0 auto;
       align-items: center;
