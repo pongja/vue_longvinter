@@ -324,6 +324,9 @@ a {
         font-size: 18px;
         word-break: break-all;
     }
+    .down_arrow{
+        display: none;
+    }
 }
 @media screen and (max-width: 560px) {
     .mainsection{
