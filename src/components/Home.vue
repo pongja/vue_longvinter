@@ -130,6 +130,7 @@ onMounted(()=>{
     scrollActive.value = scrollPostion.value > 800
     scrollPostion.value = window.scrollY
   })
+  window.addEventListener('resize', () => setScreenSize())
 })
 const toTop = () => {
    window.scrollTo({ 
@@ -156,6 +157,11 @@ Array.prototype.forEach.call(itemList, function(section){
 })
 }
 })
+const setScreenSize =() => {
+  const vh = window.innerHeight * 0.01
+
+  document.documentElement.style.setProperty('--vh', `${vh}px`)
+}
 </script>
 <style scoped>
 @import "~/assets/main.css";
