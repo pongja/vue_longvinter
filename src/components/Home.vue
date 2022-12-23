@@ -18,7 +18,7 @@
             type="button"
             class="down_arrow">
             <a href="#section_top"><img
-              src="../../public/images/down_arrow.svg"
+              src="../../public/images/down-circle-outline.svg"
               alt="down_icon" /></a>
           </button>
         </div>
