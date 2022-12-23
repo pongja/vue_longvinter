@@ -11,7 +11,7 @@
               <h4>
                 LongVinter
               </h4>
-              <p>LongVinter 포트폴리오</p>
+              <p>LongVinter portfolio</p>
             </div>
           </div>
           <button
@@ -29,7 +29,7 @@
       <div class="section animatable">
         <div class="section-text order-grid text-left">
           <p class="section-t1">
-            탐험하고 !
+            Explore !
           </p>
           <p class="section-t2">
             롱빈터의 맵 곳곳을 탐험하며 <br />새로운 곳을 탐험해보세요.
@@ -43,20 +43,20 @@
         </div>
         <div class="section-text text-right">
           <p class="section-t1">
-            건물을 짓고 !
+            Build !
           </p>
           <p class="section-t2">
-            롱빈터에서 건물을 짓고 나만의 집을 만들수있습니다.
+            롱빈터에서 건물을 짓고 나만의 <br />집을 만들수있습니다.
           </p>
         </div>
       </div>
       <div class="section animatable">
         <div class="section-text order-grid text-left">
           <p class="section-t1">
-            친구를 만들고 !
+            Make friends !
           </p>
           <p class="section-t2">
-            마음맞는 친구와 파티를 맺어 롱빈터를 즐겨보세요.
+            마음맞는 친구와 파티를 맺어<br /> 롱빈터를 즐겨보세요.
           </p>
         </div>
         <div class="sectimg3 centerimg">
@@ -67,17 +67,17 @@
         </div>
         <div class="section-text text-right">
           <p class="section-t1">
-            무기 & 아이템을 만들고 !
+            Create !
           </p>
           <p class="section-t2">
-            롱빈터는 무기 & 아이템을 만들어 다른 플레이어와 <br />PVP를 할수있습니다.
+            롱빈터는 무기 & 아이템을 만들어 <br />다른 플레이어와 PVP를 할수있습니다.
           </p>
         </div>
       </div>
       <div class="section animatable">
         <div class="section-text order-grid text-left">
           <p class="section-t1">
-            살아남으세요 !
+            Survive !
           </p>
           <p class="section-t2">
             롱빈터에서 건물을 짓고 친구를 만들고 무기를 <br />생산하여 적과 환경으로부터 살아남으세요.!
@@ -91,7 +91,7 @@
         </div>
         <div class="section-text text-right">
           <p class="section-t1">
-            지금바로 시작하세요.
+            Get Started Now.
           </p>
           <p
             class="section-t2">
