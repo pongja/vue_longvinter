@@ -39,7 +39,7 @@
               <img
                 src="../../public/images/pheasant.png"
                 class="brid_img" />
-              <p>닭  : 흔하게 들판에서 많이 발견할 수 있다.</p>
+              <p>닭 : 흔하게 들판에서 많이 발견할 수 있다.</p>
             </div>
             <div
               v-else
@@ -466,7 +466,7 @@ const slides = [
   width: 100%;
   margin: 0 auto;
   min-height: 200px;
-  margin-top: 100px;
+  padding-top: 100px;
 }
 .youtube_box{
   display: grid;
@@ -487,7 +487,7 @@ const slides = [
   width: 100%;
   margin: 0 auto;
   min-height: 200px;
-  margin-top: 100px;
+  padding-top: 100px;
 }
 .youtube_container_mobile.on{
   display: none;
@@ -502,6 +502,9 @@ const slides = [
   font-weight: bold;
   font-size: 27px;
   
+}
+.mobile_width{
+  width: auto;
 }
 /* footer */
 .footer {
