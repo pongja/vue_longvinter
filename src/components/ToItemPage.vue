@@ -105,7 +105,7 @@
               <img
                 src="../../public/images/biggrouse.png"
                 class="brid_img" />
-              <p>큰 뇌조  : 설원지역과 사막지역 맵상단쪽에서 발견할 수 있다.</p>
+              <p>큰 뇌조  : 설원지역과 사막지역 맵상단에서 발견할 수 있다.</p>
             </div>
             <div
               v-else
@@ -404,7 +404,6 @@ const slides = [
 .info_container{
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
 }
 .info_grid_line{
   line-height: 1.5;
