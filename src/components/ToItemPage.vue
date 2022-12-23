@@ -70,7 +70,7 @@
               v-if="grouse"
               class="flex_pimg">
               <img
-                src="../../public/images/2.PNG"
+                src="../../public/images/2.png"
                 class="brid_img" />
               <p>뇌조  : 설원지역에서 발견할 수 있다.</p>
             </div>
@@ -103,7 +103,7 @@
               v-if="biggrouse"
               class="flex_pimg">
               <img
-                src="../../public/images/3.PNG"
+                src="../../public/images/3.png"
                 class="brid_img" />
               <p>큰 뇌조  : 설원지역과 사막지역 맵상단에서 발견할 수 있다.</p>
             </div>
@@ -136,7 +136,7 @@
               v-if="peacock"
               class="flex_pimg">
               <img
-                src="../../public/images/4.PNG"
+                src="../../public/images/4.png"
                 class="brid_img" />
               <p>공작새 : 맵 하단 외딴 섬 지역에서 발견할 수 있다.</p>
             </div>
