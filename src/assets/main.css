@@ -78,19 +78,18 @@ a {
     padding: 42px;
 }
 
-.ms_down_icon {
+.down_arrow {
     position: absolute;
-    bottom: 10%;
+    bottom: 9%;
     left: 50%;
     transform: translate(-50% , 0);
     background: none;
     cursor: pointer;
     border: none;
+    transition: all 0.3s;
 }
-.ms_down_icon  a{
-    display: block;
-}
-.ms_down_icon:hover {
+
+.down_arrow:hover {
     transform: translate(-50% , -3px);
 }
 .mainSlider h4 {
@@ -230,13 +229,9 @@ a {
     }
 }
 @media screen and (max-width: 1000px) {
-    .ms_down_icon{
+    .down_arrow {
         width: 45px;
         height: 45px;
-    }
-    .ms_down_icon a{
-        width: 48px;
-        height: 48px;
     }
     .mainSlider .tbox {
         max-width:100%;
