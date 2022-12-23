@@ -229,10 +229,7 @@ a {
     }
 }
 @media screen and (max-width: 1000px) {
-    .down_arrow {
-        width: 45px;
-        height: 45px;
-    }
+
     .mainSlider .tbox {
         max-width:100%;
         margin: 0 16px;
