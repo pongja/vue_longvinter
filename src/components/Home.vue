@@ -104,6 +104,11 @@
         </div>
       </div>
     </div>
+    <button
+      class="btn_top_display"
+      :class="{'btn_top_display on' : scrollActive}"
+      @click="toTop">
+    </button>
   </div>
   <div class="footer">
     <div class="footer_wrap">
@@ -115,15 +120,30 @@
   </div>
 </template>
 <script setup>
-import { watch } from 'vue'
+import { watchEffect,ref,onMounted } from 'vue'
 
 
+const scrollActive = ref(false)
+const scrollPostion  = ref(0)
+onMounted(()=>{
+  window.addEventListener('scroll', () => {
+    scrollActive.value = scrollPostion.value > 800
+    scrollPostion.value = window.scrollY
+  })
+})
+const toTop = () => {
+   window.scrollTo({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    })
+  }
 const gosteam = () => {
   window.location = 'https://store.steampowered.com/app/1635450/Longvinter/'
 }
-watch(()=>{
+watchEffect(()=>{
 window.addEventListener('scroll', function(e) {
-  scrollEvent(e)
+scrollEvent(e)
 })
 var scrollEvent = function() {
 var scroll = window.innerHeight + window.scrollY
@@ -140,6 +160,7 @@ Array.prototype.forEach.call(itemList, function(section){
 <style scoped>
 @import "~/assets/main.css";
 @import "~/assets/reset.css";
+@import "~/assets/topbtn.css";
 
 .footer{
   width: 100%;

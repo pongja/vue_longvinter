@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h3 class="info_long">
+    <h3 class="info_long margin-bottom">
       Long-Vinter World Slider
     </h3>
     <div class="fish_item">
@@ -283,6 +283,11 @@
           class="youtube_padding" />
       </div>
     </div>
+    <button
+      class="btn_top_display"
+      :class="{'btn_top_display on' : scrollActive}"
+      @click="toTop">
+    </button>
   </div>
   <div class="footer">
     <div class="footer_wrap">
@@ -297,7 +302,7 @@
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide } from 'vue3-carousel'
 import YouTube from 'vue3-youtube'
-import { ref,watchEffect } from 'vue'
+import { ref,watchEffect,onMounted } from 'vue'
 
 const WidthActive = ref(false)
 
@@ -319,7 +324,21 @@ watchEffect(()=>{
     WidthActive.value =  window.innerWidth < 590
 })
 })
-
+const scrollActive = ref(false)
+const scrollPostion  = ref(0)
+onMounted(()=>{
+  window.addEventListener('scroll', () => {
+    scrollActive.value = scrollPostion.value > 800
+    scrollPostion.value = window.scrollY
+  })
+})
+const toTop = () => {
+   window.scrollTo({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    })
+  }
  
 const slides = [
   { id: 1, src: 'home.png' },
@@ -328,262 +347,8 @@ const slides = [
 ]
 </script>
 <style scoped>
-.bird_container{
-  width: 100%;
-  padding-top: 100px;
-}
-.bird_containerbox{
- max-width: 960px;
- margin: 0 auto;
- display: grid;
-}
-.brid_img{
-  width: 70px;
-  height: 60px;
-  display: block;
-}
-.flex_pimg{
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-.margin-bottom{
-  margin-bottom: 100px;
-}
-.flex_pimg p{
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 18px;
-}
-.flex_else p{
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 18px;
-}
-.flex_else{
-  display: grid;
-  gap: 25px;
-}
-.grid_img_p{
-  display: grid;
-  grid-template-columns: 80px 1fr;
-}
-.brid_btn{
-  width: 70px;
-  height: 40px;
-  margin-bottom: 30px;
-  border: none;
-  box-shadow: 2px 2px 15px -3px #777;
-  cursor: pointer;
-  background-color: #FFFFFF;
-  color: #1B1B1E;
-  font-size: 18px;
-  font-weight: bold;
-}
-.brid_btn:hover{
-  background-color: #1B1B1E;
-  color: #FFFFFF;
-  transition: 0.6s;
-}
-.bird_div{
-  width: auto;
-  height: 300px;
-  align-items: center;
-  justify-items: center;
-  padding: 0 150px;
-}
-.carousel__item {
-  min-height: 200px;
-  width: 100%;
-  background-color: white;
-  color: black;
-  font-size: 20px;
-  border-radius: 8px;
-  justify-content: center;
-  align-items: center;
-  
-}
-.info_container{
-  width: 100%;
-  margin: 0 auto;
-}
-.info_grid_line{
-  line-height: 1.5;
-}
-.sec_align{
-  padding-left: 10px;
-}
-.windows{
-  color: #0080FF;
-}
-.steam{
-  color:#151515;
-  font-weight: bold;
-}
-.info_box{
-  margin: 0 auto;
-  box-shadow: 2px 2px 15px -3px #777;
-  padding: 10px;
-  width: 600px;
-  font-family: 'Noto Sans KR', sans-serif;
-}
-.frist_align{
-  text-align: center;
-}
-.info_box h2{
-  text-align: center;
-  font-weight: bold;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 26px;
-}
-.info_grid{
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  height: 50px;
-  align-items: center;
-}
-.fish_item{
-  border-radius: 40px;
-  
-}
-.info_img{
-  width: 600px;
-  height: auto;
-}
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.5s ease;
-}
+@import "~/assets/reset.css"; 
+@import "~/assets/topbtn.css";
+@import "~/assets/infopage.css";
 
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
-}
-.youtube_title{
-  text-align: left;
-  font-size: 25px;
-}
-.youtube_container{
-  width: 100%;
-  margin: 0 auto;
-  min-height: 200px;
-  padding-top: 100px;
-}
-.youtube_box{
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-.youtube_container.on{
-  display: none;
-}
-.slideimg{
-  width: 100%;
-  height: 400px;
-  border-radius: 80px;
-  padding: 20px;
-  
-}
-.youtube_container_mobile{
-  width: 100%;
-  margin: 0 auto;
-  min-height: 200px;
-  padding-top: 100px;
-}
-.youtube_container_mobile.on{
-  display: none;
-}
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  min-height: 200px;
-  padding: 200px 16px 0px 16px;
-}
-.info_long{
-  font-weight: bold;
-  font-size: 27px;
-  
-}
-.mobile_width{
-  width: auto;
-}
-/* footer */
-.footer {
-  width: 100%;
-  height: 140px;
-  margin-top: 100px;
-  display: flex;
-  align-items: center;
-  background: #1B1B1E;
-  /* position: absolute;
-  bottom: 0; */
-}
-
-.footer .footer_wrap {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-.footer .footer_text {
-  color: white;
-  text-align: center;
-  margin-top: 12px;
-}
-
-.footer .footer_text p {
-  line-height: 1.6;
-  font-size: 15px;
-  margin-bottom: 0;
-}
-@media screen and (max-width:768px) {
-  .info_img{
-    width: 100%;
-  }
-  .info_container{
-    padding: 50px 0;
-  }
-  .info_box{
-    width: auto;
-  }
-  .bird_div{
-    padding: 0 50px;
-  }
-  .container{
-    padding: 100px 16px 100px 16px;
-  }
-  .youtube_container_mobile{
-    padding-top: 150px;
-  }
-  .flex_pimg p{
-    font-size: 16px;
-  }
-  .flex_else p{
-   font-size: 16px;
-  }
-}
-@media screen and (max-width:560px) {
-   /* .youtube_container {
-    display: none;
-  } */
-  .bird_div{
-    padding: 0 30px;
-  }
-   .flex_pimg p{
-    font-size: 14px;
-  }
-  .flex_else p{
-   font-size: 14px;
-  }
-}
-@media screen and (max-width:500px){
-  .slideimg{
-    height: 300px;
-    padding: 5px;
-    border-radius: 40px;
-  }
-}
-@media screen and (max-width:375px){
-  .slideimg{
-    height: 200px;
-  }
-}
 </style>
