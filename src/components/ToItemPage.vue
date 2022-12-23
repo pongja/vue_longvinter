@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h3 class="info_long">
-      롱빈터 정보
+      Long-Vinter World Slider
     </h3>
     <div class="fish_item">
       <Carousel
@@ -21,7 +21,162 @@
         </Slide>
       </Carousel>
     </div>
+    <div class="bird_container">
+      <div class="bird_containerbox">
+        <h3 class="info_long margin-bottom">
+          Long-Vinter hunting book
+        </h3>
+        <div class="bird_div">
+          <button
+            class="brid_btn"
+            @click="pheasant = !pheasant">
+            click
+          </button>
+          <Transition>
+            <div
+              v-if="pheasant"
+              class="flex_pimg">
+              <img
+                src="../../public/images/pheasant.png"
+                class="brid_img" />
+              <p>닭  : 흔하게 들판에서 많이 발견할 수 있다.</p>
+            </div>
+            <div
+              v-else
+              class="flex_else">
+              <div class="grid_img_p">
+                <img
+                  src="../../public/images/pheasant.png"
+                  class="brid_img" />
+                <p>닭을 사냥하면 자주발견되는 깃털아이템</p>
+              </div>
+              <div class="grid_img_p"> 
+                <img
+                  src="../../public/images/pheasant2.png"
+                  class="brid_img" />
+                <p>닭을 사냥하면 간헐적으로 발견되는 깃털아이템</p>
+              </div>  
+            </div>
+          </Transition>
+        </div>
+        <div class="bird_div">
+          <button
+            class="brid_btn"
+            @click="grouse = !grouse">
+            click
+          </button>
+          <Transition>
+            <div
+              v-if="grouse"
+              class="flex_pimg">
+              <img
+                src="../../public/images/grouse.png"
+                class="brid_img" />
+              <p>뇌조  : 설원지역에서 발견할 수 있다.</p>
+            </div>
+            <div
+              v-else
+              class="flex_else">
+              <div class="grid_img_p">
+                <img
+                  src="../../public/images/grouse.png"
+                  class="brid_img" />
+                <p>뇌조를 사냥하면 자주발견되는 깃털아이템</p>
+              </div>
+              <div class="grid_img_p"> 
+                <img
+                  src="../../public/images/grouse2.png"
+                  class="brid_img" />
+                <p>뇌조를 사냥하면 간헐적으로 발견되는 깃털아이템</p>
+              </div>  
+            </div>
+          </Transition>
+        </div>
+        <div class="bird_div">
+          <button
+            class="brid_btn"
+            @click="biggrouse = !biggrouse">
+            click
+          </button>
+          <Transition>
+            <div
+              v-if="biggrouse"
+              class="flex_pimg">
+              <img
+                src="../../public/images/biggrouse.png"
+                class="brid_img" />
+              <p>큰 뇌조  : 설원지역과 사막지역 맵상단쪽에서 발견할 수 있다.</p>
+            </div>
+            <div
+              v-else
+              class="flex_else">
+              <div class="grid_img_p">
+                <img
+                  src="../../public/images/biggrouse.png"
+                  class="brid_img" />
+                <p>큰 뇌조를 사냥하면 자주발견되는 깃털아이템</p>
+              </div>
+              <div class="grid_img_p"> 
+                <img
+                  src="../../public/images/biggrouse2.png"
+                  class="brid_img" />
+                <p>큰 뇌조를 사냥하면 간헐적으로 발견되는 깃털아이템</p>
+              </div>  
+            </div>
+          </Transition>
+        </div>
+        <div class="bird_div">
+          <button
+            class="brid_btn"
+            @click="peacock = !peacock">
+            click
+          </button>
+          <Transition>
+            <div
+              v-if="peacock"
+              class="flex_pimg">
+              <img
+                src="../../public/images/peacock.png"
+                class="brid_img" />
+              <p>공작새 : 맵 하단 외딴 섬 지역에서 많이 발견할 수 있다.</p>
+            </div>
+            <div
+              v-else
+              class="flex_else">
+              <div class="grid_img_p">
+                <img
+                  src="../../public/images/peacock.png"
+                  class="brid_img" />
+                <p>공작새를 사냥하면 자주발견되는 깃털아이템</p>
+              </div>
+              <div class="grid_img_p"> 
+                <img
+                  src="../../public/images/peacock2.png"
+                  class="brid_img" />
+                <p>공작새를 사냥하면 간헐적으로 발견되는 깃털아이템</p>
+              </div>  
+            </div>
+          </Transition>
+        </div>
+      <!--<div class="bird_div">
+        <button @click="deer = !deer">
+          click
+        </button>
+        <Transition>
+          <p v-if="deer">
+            hello
+          </p>
+          <p v-else>
+            hello2
+          </p>
+        </Transition>
+      </div>-->
+      </div>
+    </div>
     <div class="info_container">
+      <h3 class="info_long margin-bottom">
+        LongVinter-info
+      </h3>
       <div class="info_box">
         <h2>
           Longvinter
@@ -100,29 +255,33 @@
     <div
       class="youtube_container"
       :class="{'youtube_container on' : WidthActive}">
-      <h3 class="youtube_title">
-        공식영상
+      <h3 class="youtube_title margin-bottom">
+        Long-Vinter Youtube
       </h3>
-      <YouTube
-        src="https://youtu.be/GQmO52f26Ws"
-        width="500" 
-        height="300" />
+      <div class="youtube_box">
+        <YouTube
+          src="https://youtu.be/GQmO52f26Ws"
+          width="500" 
+          height="300" />
+      </div> 
     </div>
     <div
       class="youtube_container_mobile"
       :class="{'youtube_container_mobile on' : WidthmobileActive}">
-      <h3 class="youtube_title">
-        공식영상
+      <h3 class="youtube_title margin-bottom">
+        Long-Vinter Youtube
       </h3>
       <component 
         :is="script" 
         id="youtube-iframe-js-api-script"
         src="https://www.youtube.com/iframe_api" />
-      <YouTube
-        src="https://youtu.be/GQmO52f26Ws"
-        width="220" 
-        height="auto" 
-        class="youtube_padding" />
+      <div class="youtube_box">
+        <YouTube
+          src="https://youtu.be/GQmO52f26Ws"
+          width="220" 
+          height="auto" 
+          class="youtube_padding" />
+      </div>
     </div>
   </div>
   <div class="footer">
@@ -145,6 +304,11 @@ const WidthActive = ref(false)
 //모바일
 const WidthmobileActive = ref(true)
 
+const pheasant = ref(true)
+const grouse = ref(true)
+const biggrouse = ref(true)
+const peacock = ref(true)
+
 
 watchEffect(()=>{
   window.addEventListener('resize', () => {
@@ -164,7 +328,68 @@ const slides = [
 ]
 </script>
 <style scoped>
-
+.bird_container{
+  width: 100%;
+  padding-top: 100px;
+}
+.bird_containerbox{
+ max-width: 960px;
+ margin: 0 auto;
+ display: grid;
+}
+.brid_img{
+  width: 70px;
+  height: 60px;
+  display: block;
+}
+.flex_pimg{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.margin-bottom{
+  margin-bottom: 100px;
+}
+.flex_pimg p{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 18px;
+}
+.flex_else p{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 18px;
+}
+.flex_else{
+  display: grid;
+  gap: 25px;
+}
+.grid_img_p{
+  display: grid;
+  grid-template-columns: 80px 1fr;
+}
+.brid_btn{
+  width: 70px;
+  height: 40px;
+  margin-bottom: 30px;
+  border: none;
+  box-shadow: 2px 2px 15px -3px #777;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  color: #1B1B1E;
+  font-size: 18px;
+  font-weight: bold;
+}
+.brid_btn:hover{
+  background-color: #1B1B1E;
+  color: #FFFFFF;
+  transition: 0.6s;
+}
+.bird_div{
+  width: auto;
+  height: 300px;
+  align-items: center;
+  justify-items: center;
+  padding: 0 150px;
+}
 .carousel__item {
   min-height: 200px;
   width: 100%;
@@ -180,9 +405,6 @@ const slides = [
   width: 100%;
   margin: 0 auto;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .info_grid_line{
   line-height: 1.5;
@@ -201,7 +423,7 @@ const slides = [
   margin: 0 auto;
   box-shadow: 2px 2px 15px -3px #777;
   padding: 10px;
-  max-width: 600px;
+  width: 600px;
   font-family: 'Noto Sans KR', sans-serif;
 }
 .frist_align{
@@ -224,21 +446,32 @@ const slides = [
   
 }
 .info_img{
-  width: 568px;
+  width: 600px;
   height: auto;
 }
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 .youtube_title{
-  text-align: center;
+  text-align: left;
   font-size: 25px;
 }
 .youtube_container{
   width: 100%;
   margin: 0 auto;
   min-height: 200px;
+  margin-top: 100px;
+}
+.youtube_box{
   display: grid;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 .youtube_container.on{
   display: none;
@@ -254,9 +487,7 @@ const slides = [
   width: 100%;
   margin: 0 auto;
   min-height: 200px;
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  margin-top: 100px;
 }
 .youtube_container_mobile.on{
   display: none;
@@ -265,11 +496,12 @@ const slides = [
   max-width: 960px;
   margin: 0 auto;
   min-height: 200px;
-  padding: 100px 16px 0px 16px;
+  padding: 200px 16px 0px 16px;
 }
 .info_long{
   font-weight: bold;
   font-size: 27px;
+  
 }
 /* footer */
 .footer {
@@ -305,16 +537,28 @@ const slides = [
     width: 100%;
   }
   .info_container{
-    margin: 50px 0;
+    padding: 50px 0;
   }
   .info_box{
-    width: 100%;
+    width: auto;
+  }
+  .bird_div{
+    padding: 0 50px;
+  }
+  .container{
+    padding: 100px 16px 100px 16px;
+  }
+  .youtube_container_mobile{
+    padding-top: 150px;
   }
 }
 @media screen and (max-width:560px) {
    /* .youtube_container {
     display: none;
   } */
+  .bird_div{
+    padding: 0 30px;
+  }
 }
 @media screen and (max-width:500px){
   .slideimg{
