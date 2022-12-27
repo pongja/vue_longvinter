@@ -1,46 +1,48 @@
 <template>
-  <div class="container">
-    <hr class="hr_tag" />
-    <div class="grid_news">
-      <img
-        src="../../public/images/happy.png"
-        class="happy_img" />
-      <div>
-        <p class="title_News">
-          News page has been opened.
-        </p>
-        <P class="subTitle">
-          #Develog
-        </P>
-        <p class="content_p">
-          Long Vinter news and information on the latest developments related to the website.
-        </p>
-      </div>
-    </div>
-    <div class="develog_container">
-      <div class="develog_box">
+  <div id="wrap">
+    <div class="container">
+      <hr class="hr_tag" />
+      <div class="grid_news">
         <img
-          src="../../public/images/server.png"
-          class="develog_img" />
+          src="../../public/images/happy.png"
+          class="happy_img" />
         <div>
-          <p class="dayfont">
-            <span class="dayfont_span">Tuesday 27</span>
+          <p class="title_News">
+            News page has been opened.
           </p>
-          <p class="month_font">
-            #December News
-          </p>
-          <p class="box_font">
-            There is a problem that the server cannot be maintained due to the unstable server caused by DDoS.
+          <P class="subTitle">
+            #Develog
+          </P>
+          <p class="content_p">
+            Long Vinter news and information on the latest developments related to the website.
           </p>
         </div>
       </div>
+      <div class="develog_container">
+        <div class="develog_box">
+          <img
+            src="../../public/images/server.png"
+            class="develog_img" />
+          <div>
+            <p class="dayfont">
+              <span class="dayfont_span">Tuesday 27</span>
+            </p>
+            <p class="month_font">
+              #December News
+            </p>
+            <p class="box_font">
+              There is a problem that the server cannot be maintained due to the unstable server caused by DDoS.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="footer">
-    <div class="footer_wrap">
-      <div class="footer_text">
-        <p>GitHub : https://github.com/pongja</p>
-        <p>email : rlqjadl2222@naver.com</p>
+    <div class="footer">
+      <div class="footer_wrap">
+        <div class="footer_text">
+          <p>GitHub : https://github.com/pongja</p>
+          <p>email : rlqjadl2222@naver.com</p>
+        </div>
       </div>
     </div>
   </div>
@@ -48,7 +50,7 @@
 <style scoped>
 @import "~/assets/reset.css";
 
-
+#wrap {display:flex; min-height:100vh; flex-direction:column;}
 .box_font{
   font-size: 14px;
   font-family: 'Noto Sans KR', sans-serif;
@@ -153,6 +155,7 @@
   min-height: 100%;
   height: auto;
   padding: 200px 16px 160px 16px;
+  flex:1;
 }
 @media screen and (max-width:768px ){
   .grid_news{
