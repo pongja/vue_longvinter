@@ -86,7 +86,6 @@ a {
     background: none;
     cursor: pointer;
     border: none;
-    transition: all 0.3s;
 }
 
 .down_arrow:hover {

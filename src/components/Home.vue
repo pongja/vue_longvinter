@@ -24,8 +24,8 @@
         </div>
       </div>
     </div>
-    <div id="section_top"></div>
     <div class="mainsection">
+      <div id="section_top"></div>
       <div class="section animatable">
         <div class="section-text order-grid text-left">
           <p class="section-t1">
