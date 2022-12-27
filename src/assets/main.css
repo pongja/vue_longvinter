@@ -144,9 +144,6 @@ a {
   .mobile {
     display: block;
   }
-  #section_top{
-    display: block;
-  }
   .sectimg1 {
     background: url(../../public/images/map.jpg) no-repeat;
       background-size: contain;
@@ -249,6 +246,9 @@ a {
     .mainSlider h4 {
         font-size: 24px;
         margin: 24px 0;
+    }
+    #section_top{
+        height: 60px;
     }
     .mainsection .section {
         grid-template-columns: 1fr;
