@@ -1,11 +1,13 @@
 <template>
-  <div class="container">
-  </div>
-  <div class="footer">
-    <div class="footer_wrap">
-      <div class="footer_text">
-        <p>GitHub : https://github.com/pongja</p>
-        <p>email : rlqjadl2222@naver.com</p>
+  <div id="wrap">
+    <div class="container">
+    </div>
+    <div class="footer">
+      <div class="footer_wrap">
+        <div class="footer_text">
+          <p>GitHub : https://github.com/pongja</p>
+          <p>email : rlqjadl2222@naver.com</p>
+        </div>
       </div>
     </div>
   </div>
@@ -14,8 +16,9 @@
 .container {
   max-width: 960px;
   margin: 0 auto;
-  height: 100vh;
+  flex:1;
 }
+#wrap {display:flex; min-height:100vh; flex-direction:column;}
 /* footer */
 .footer{
   width: 100%;

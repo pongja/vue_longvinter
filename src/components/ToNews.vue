@@ -21,14 +21,14 @@
       <div class="develog_container">
         <div class="develog_box">
           <img
-            src="../../public/images/server.png"
+            src="../../public/images/server.jpg"
             class="develog_img" />
           <div>
             <p class="dayfont">
               <span class="dayfont_span">Tuesday 27</span>
             </p>
             <p class="month_font">
-              #December News
+              #1 December News
             </p>
             <p class="box_font">
               There is a problem that the server cannot be maintained due to the unstable server caused by DDoS.
@@ -160,13 +160,16 @@
 @media screen and (max-width:768px ){
   .grid_news{
     display: block;
+    text-align: center;
   }
   .develog_img{
-    width: 200px;
-    height: 200px
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
   }
   .develog_box{
     display: block;
+    text-align: center;
   }
 }
 /* footer */

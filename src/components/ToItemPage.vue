@@ -183,7 +183,7 @@
         </h2>
         <img
           class="info_img"
-          src="../../public/images/longvinter.png" />
+          src="../../public/images/longvinter.jpg" />
         <div class="info_grid_line">
           <div class="info_grid">
             <div class="frist_align">
@@ -341,13 +341,13 @@ const toTop = () => {
   }
  
 const slides = [
-  { id: 1, src: 'sun1.png' },
-  { id: 2, src: 'hillring.png'  },
-  { id: 3, src: 'sun2.png'  },
-  { id: 4, src: 'fishing.png' },
-  { id: 5, src: 'sun4.png'  },
-  { id: 6, src: 'sun3.png'  },
-  { id: 7, src: 'home.png'  },
+  { id: 1, src: 'sun1.jpg' },
+  { id: 2, src: 'hillring.jpg'  },
+  { id: 3, src: 'sun2.jpg'  },
+  { id: 4, src: 'fishing.jpg' },
+  { id: 5, src: 'sun4.jpg'  },
+  { id: 6, src: 'sun3.jpg'  },
+  { id: 7, src: 'home.jpg'  },
 
 ]
 </script>
