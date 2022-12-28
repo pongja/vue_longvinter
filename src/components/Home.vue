@@ -17,7 +17,7 @@
           <button
             type="button"
             class="down_arrow">
-            <a href="#section_top"><img
+            <a @click="down_icon()"><img
               src="../../public/images/down-circle-outline.svg"
               alt="down_icon" /></a>
           </button>
@@ -25,7 +25,9 @@
       </div>
     </div>
     <div class="mainsection">
-      <div id="section_top"></div>
+      <div
+        id="section_top"
+        ref="section_top"></div>
       <div class="section animatable">
         <div class="section-text order-grid text-left">
           <p class="section-t1">
@@ -124,6 +126,13 @@ import { watchEffect,ref,onMounted } from 'vue'
 
 const scrollActive = ref(false)
 const scrollPostion  = ref(0)
+const section_top = ref(null)
+
+const down_icon = ()=>{
+  section_top.value.scrollIntoView({ behavior: 'smooth'})
+}
+
+
 onMounted(()=>{
   window.addEventListener('scroll', () => {
     scrollActive.value = scrollPostion.value > 800
