@@ -19,7 +19,10 @@
         </div>
       </div>
       <div class="develog_container">
-        <div class="develog_box">
+        <div
+          class="develog_box aos-init"
+          data-aos="zoom-in-up"
+          data-aos-duration="1500">
           <img
             src="../../public/images/portf.jpg"
             class="develog_img" />
@@ -35,7 +38,10 @@
             </p>
           </div>
         </div>
-        <div class="develog_box">
+        <div
+          class="develog_box aos-init"
+          data-aos="zoom-in-up"
+          data-aos-duration="1500">
           <img
             src="../../public/images/server.jpg"
             class="develog_img" />
@@ -63,6 +69,16 @@
     </div>
   </div>
 </template>
+<script setup>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { onMounted } from 'vue'
+
+onMounted(() => {
+    AOS.init()
+})
+
+</script>
 <style scoped>
 @import "~/assets/reset.css";
 @import "~/assets/news.css";
