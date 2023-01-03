@@ -32,7 +32,7 @@
               </h3>
               <!-- <textarea v-model="form.description"></textarea> -->
               <QuillEditor
-                v-model:content="form.description"
+                v-model:content="form.content"
                 content-type="html"
                 :options="form.editorOption"
                 style="height:400px;"
@@ -87,7 +87,7 @@ const back = () => {
   }
 const form = ref({
   title: null, //제목
-  description: null,
+  content: null,
   editorOption: {
         modules: {
          toolbar:[

@@ -19,33 +19,37 @@
             class="notice_content_wrap">
             <div class="notice_top">
               <p class="notice_title">
+                {{ form.title }}
               </p>
               <div class="notice_sub_title">
-                <p>작성자 : </p>
+                <p>작성자 : {{ form.username }} </p>
               </div>
               <div class="notice_sub_title">
-                <p>등록일 : </p>
+                <p>등록일 :  {{ form.createdAt }}</p>
               </div>
             </div>
             <div
               class="content_box"
-              v-html="form.description">
+              v-html="form.content">
             </div>
           </div>
           <div class="detail_button_wrap">
             <button
               type="button"
-              class="writing_btn back_btn">
+              class="writing_btn back_btn"
+              @click="back()">
               목록
             </button>
             <button
               type="button"
-              class="writing_btn edit_btn">
+              class="writing_btn edit_btn"
+              @click="editpage(id)">
               수정
             </button>
             <button
               type="button"
-              class="writing_btn del_btn">
+              class="writing_btn del_btn"
+              @click="deletepost()">
               삭제
             </button>
           </div>
@@ -63,7 +67,43 @@
   </div>
 </template>
 <script setup>
+import { useRoute, useRouter } from 'vue-router'
+import { ref } from 'vue'
+import axios from 'axios'
+import '@vueup/vue-quill/dist/vue-quill.snow.css'
 
+const form = ref([])
+const route = useRoute()
+const router = useRouter()
+const id = route.params.id
+
+const fetchDetail = async () => {
+ try{
+  await axios.get(`http://localhost:3000/posts/${id}`)
+  .then((res)=>{
+    console.log(res.data)
+    form.value = res.data
+  })
+  } catch(error){
+    alert('정보를 불러올수없습니다.')
+    console.log(error)
+  }
+}
+fetchDetail(id)
+const back = () => {
+    router.push({
+      path: '/Notice',
+    })
+  }
+
+const editpage = id => {
+  router.push({
+    name: 'noticeEdit',
+    params: {
+      id
+    }
+  }) 
+}
 </script>
 <style scoped>
 @import "~/assets/reset.css";

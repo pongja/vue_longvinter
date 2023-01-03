@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "db" : "json-server --watch db.json"
   },
   "dependencies": {
     "@vueup/vue-quill": "^1.0.1",

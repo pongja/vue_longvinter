@@ -31,13 +31,20 @@
               </th>
             </thead>
             <tbody>
-              <tr>
+              <tr
+                v-for="forms in posts"
+                :key="forms.id"
+                style="cursor: pointer;"
+                @click="NoticeDetail(forms.id)">
                 <td
                   class="td_title">
+                  {{ forms.title }}
                 </td>
                 <td class="text_center">
+                  {{ forms.username }}
                 </td>
                 <td class="text_center">
+                  {{ forms.createdAt }}
                 </td>
               </tr>
             </tbody>
@@ -55,6 +62,10 @@
               </li>
             </ul>
           </div>
+          <AppPagination
+            :current-page="params._page"
+            :page-count="pageCount"
+            @page="page => (params._page = page)" />
         </div>
       </div>
     </div>
@@ -70,10 +81,54 @@
 </template>
 <script setup>
 import { useRouter } from 'vue-router'
+import axios from 'axios'
+import { ref,computed } from 'vue'
+import AppPagination from '~/components/AppPagination.vue'
+
+const form = ref([])
+const params = ref({
+  _page: 1,
+  _order: 'desc',
+  _limit: 10,
+})
+const totalCount = ref(0)
+const pageCount = computed(() => {
+  return Math.ceil(totalCount.value / params.value._limit)
+})
+const posts = computed(() => {
+  return form.value.filter((post, index) => {
+    const { _limit, _page } = params.value
+    const p = _page - 1
+    const length = p * _limit
+    return (index >= length && index < length + _limit)
+  })
+})
+const fetchPosts = async (params) =>{
+  axios.get('http://localhost:3000/posts',{
+    params: {
+      params
+    }
+  })
+  .then((res)=>{
+    console.log(res.data)
+    const allPosts = res.data
+    form.value = allPosts
+    totalCount.value = allPosts.length
+  })
+}
+fetchPosts()
 const router = useRouter()
 const NoticeWrite = () => {
   router.push({
     path: '/Notice/Create',
+  }) 
+}
+const NoticeDetail = id => {
+  router.push({
+    name: 'noticedetail',
+    params: {
+      id
+    }
   }) 
 }
 </script>
