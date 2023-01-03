@@ -32,7 +32,7 @@
               </h3>
               <QuillEditor
                 ref="resetquill"
-                v-model:content="state.form.description"
+                v-model:content="state.form.content"
                 content-type="html"
                 :options="state.form.editorOption"
                 style="height:400px;"
@@ -77,7 +77,7 @@ const id = route.params.id
 const state = reactive({
   form: {
   title: '',
-  description: '',
+  content: '',
   editorOption: {
         modules: {
          toolbar:[
@@ -103,11 +103,11 @@ const backload = () => {
 const fetchEdit = async () => {
 const postdata = {
         title: state.form.title,
-        description: state.form.description,
+        content: state.form.content,
       }
  try{
   if(confirm('수정하시겠습니까?')){
-  await axios.put(`http://127.0.0.1:8000/jobs/update/${id}`,postdata,{
+  await axios.put(`http://localhost:3000/posts/${id}`,postdata,{
 
         withCredentials:true,   
   })

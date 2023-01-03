@@ -25,6 +25,14 @@
                 v-model="form.title"
                 maxlength="100"></textarea>
             </div>
+            <div class="in_title">
+              <h3 class="sub_title">
+                작성자
+              </h3>
+              <textarea
+                v-model="form.username"
+                maxlength="100"></textarea>
+            </div>
             <div class="in_title contents">
               <h3 class="sub_title">
                 내용
@@ -74,12 +82,15 @@ import { QuillEditor } from '@vueup/vue-quill'
 import axios from 'axios'
 import '@vueup/vue-quill/dist/vue-quill.snow.css'
 
+
+
 const router = useRouter()
 
 const formCreate = async (id) => {
     const data = {
         title: form.value.title,
         content: form.value.content,
+        username: form.value.username,
       }
   try {
     if(confirm('글을 작성하시겠습니까?')) {

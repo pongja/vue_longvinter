@@ -24,9 +24,9 @@
               <div class="notice_sub_title">
                 <p>작성자 : {{ form.username }} </p>
               </div>
-              <div class="notice_sub_title">
+              <!-- <div class="notice_sub_title">
                 <p>등록일 :  {{ form.createdAt }}</p>
-              </div>
+              </div> -->
             </div>
             <div
               class="content_box"
@@ -72,6 +72,8 @@ import { ref } from 'vue'
 import axios from 'axios'
 import '@vueup/vue-quill/dist/vue-quill.snow.css'
 
+
+
 const form = ref([])
 const route = useRoute()
 const router = useRouter()
@@ -104,6 +106,22 @@ const editpage = id => {
     }
   }) 
 }
+const deletepost =  async () => {
+ 
+ try{
+  if (confirm('삭제하시겠습니까?')) {
+    await axios.delete(`http://localhost:3000/posts/${id}`)
+    .then((res)=>{
+    console.log(res.data)
+    form.value = res.data
+    })
+      router.push({ name: 'Notice' })
+    }
+  } catch (error) {
+    alert('삭제실패')
+    console.log(error)
+  }
+}  
 </script>
 <style scoped>
 @import "~/assets/reset.css";

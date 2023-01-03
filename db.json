@@ -1,13 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "test페이지가 오픈되었어요",
-      "username": "관리자",
-      "content": "내용1",
-      "createdAt": "2022-01-03"
-    },
-    {
       "id": 2,
       "title": "json-server test~",
       "username": "김말이",
@@ -15,18 +8,10 @@
       "createdAt": "2022-01-03"
     },
     {
-      "id": 3,
-      "title": "세번째 새글",
-      "username": "떡말이",
-      "content": "내용3",
-      "createdAt": "2022-01-03"
-    },
-    {
-      "id": 4,
-      "title": "네번째 새글",
-      "username": "계란말이",
-      "content": "내용4",
-      "createdAt": "2022-01-03"
+      "title": "간단한 로컬테스트중",
+      "content": "<h2><span style=\"color: rgb(0, 97, 0);\">에디터 </span><span style=\"color: rgb(230, 0, 0);\">테스트 </span><span style=\"color: rgb(0, 102, 204);\">작성중입니다.</span></h2>",
+      "username": "에디터",
+      "id": 3
     }
   ]
 }

@@ -26,9 +26,9 @@
               <th class="th_name">
                 작성자
               </th>
-              <th class="th_date">
+              <!-- <th class="th_date">
                 날짜
-              </th>
+              </th> -->
             </thead>
             <tbody>
               <tr
@@ -43,9 +43,9 @@
                 <td class="text_center">
                   {{ forms.username }}
                 </td>
-                <td class="text_center">
+                <!-- <td class="text_center">
                   {{ forms.createdAt }}
-                </td>
+                </td> -->
               </tr>
             </tbody>
           </table>
@@ -60,7 +60,7 @@
               <li>
                 <a class="notice_title">{{ forms.title }}</a>
                 <p class="notice_date">
-                  {{ forms.createdAt }}
+                  {{ forms.username }}
                 </p>
                 <p class="right_icon"></p>
               </li>
