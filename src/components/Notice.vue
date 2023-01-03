@@ -50,13 +50,17 @@
             </tbody>
           </table>
           <div
+            v-for="forms in posts"
+            :key="forms.id"
             class="mobile_notice_wrap"
-            style="cursor: pointer;">
+            style="cursor: pointer;"
+            @click="NoticeDetail(forms.id)">
             <ul
               class="mobi_notice_list">
               <li>
-                <a class="notice_title"></a>
+                <a class="notice_title">{{ forms.title }}</a>
                 <p class="notice_date">
+                  {{ forms.createdAt }}
                 </p>
                 <p class="right_icon"></p>
               </li>
@@ -84,6 +88,7 @@ import { useRouter } from 'vue-router'
 import axios from 'axios'
 import { ref,computed } from 'vue'
 import AppPagination from '~/components/AppPagination.vue'
+
 
 const form = ref([])
 const params = ref({

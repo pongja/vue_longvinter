@@ -65,6 +65,63 @@
   </div>
 </template>
 <script setup>
+import { reactive } from 'vue'
+import { useRoute,useRouter } from 'vue-router'
+import axios from 'axios'
+import { QuillEditor } from '@vueup/vue-quill'
+import '@vueup/vue-quill/dist/vue-quill.snow.css'
+
+const route = useRoute()
+const router = useRouter()
+const id = route.params.id
+const state = reactive({
+  form: {
+  title: '',
+  description: '',
+  editorOption: {
+        modules: {
+         toolbar:[
+         ['bold', 'italic', 'underline', 'strike'],
+         ['blockquote', 'code-block'],
+         [{ header: [1, 2, 3, 4, 5, 6, false] }],
+         [{list:'ordered'}, {list:'bullet'}],
+        //  [{script:'sub'},{script:'super'}],
+         [{ indent: '-1' }, { indent: '+1' }],
+         [{ color: [] }, { background: [] }]
+         ]
+        },
+      }, //내용
+  },
+})
+
+const backload = () => {
+    router.push({
+      name: 'notice',
+    })
+}
+
+const fetchEdit = async () => {
+const postdata = {
+        title: state.form.title,
+        description: state.form.description,
+      }
+ try{
+  if(confirm('수정하시겠습니까?')){
+  await axios.put(`http://127.0.0.1:8000/jobs/update/${id}`,postdata,{
+
+        withCredentials:true,   
+  })
+  .then((res)=>{
+    console.log(res.data)
+    alert('수정되었습니다.')
+  })
+  router.push({ name: 'noticedetail' })
+}
+  } catch(error){
+    alert('수정실패')
+    console.log(error)
+  }
+}
 
 </script>
 <style scoped>

@@ -2,80 +2,31 @@
   "posts": [
     {
       "id": 1,
-      "title": "첫페이지",
-      "username" : "관리자",
+      "title": "test페이지가 오픈되었어요",
+      "username": "관리자",
       "content": "내용1",
-      "createdAt" : "2021-01-01"
+      "createdAt": "2022-01-03"
     },
     {
       "id": 2,
-      "title": "ㅎㅎ",
-      "username" : "관리자2",
+      "title": "json-server test~",
+      "username": "김말이",
       "content": "내용2",
-      "createdAt" : "2021-01-02"
+      "createdAt": "2022-01-03"
     },
     {
       "id": 3,
-      "title": "두번째",
-      "username" : "관리자3",
+      "title": "세번째 새글",
+      "username": "떡말이",
       "content": "내용3",
-      "createdAt" : "2021-01-03"
+      "createdAt": "2022-01-03"
     },
     {
       "id": 4,
-      "title": "네번쨰",
-      "username" : "관리자4",
+      "title": "네번째 새글",
+      "username": "계란말이",
       "content": "내용4",
-      "createdAt" : "2021-01-04"
-    },
-    {
-      "id": 5,
-      "title": "5번째",
-      "username" : "관리자5",
-      "content": "내용5",
-      "createdAt" : "2021-01-05"
-    },
-    {
-      "id": 6,
-      "title": "6번쨰",
-      "username" : "관리자4",
-      "content": "내용4",
-      "createdAt" : "2021-01-04"
-    },
-    {
-      "id": 7,
-      "title": "7번쨰",
-      "username" : "관리자4",
-      "content": "내용4",
-      "createdAt" : "2021-01-04"
-    },
-    {
-      "id": 8,
-      "title": "8번쨰",
-      "username" : "관리자4",
-      "content": "내용4",
-      "createdAt" : "2021-01-04"
-    },
-    {
-      "id": 9,
-      "title": "9번쨰",
-      "username" : "관리자4",
-      "content": "내용4",
-      "createdAt" : "2021-01-04"
-    },
-    {
-      "id": 10,
-      "title": "10번쨰",
-      "username" : "관리자4",
-      "content": "내용4",
-      "createdAt" : "2021-01-04"
-    },
-    {
-      "id": 11,
-      "title": "11번쨰",
-      "username" : "관리자4",
-      "content": "내용4",
-      "createdAt" : "2022-01-03"
+      "createdAt": "2022-01-03"
     }
   ]
 }
