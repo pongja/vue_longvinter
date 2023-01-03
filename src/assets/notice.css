@@ -424,7 +424,7 @@ textarea:focus {
 .right_icon {
   position: absolute;
   right: 16px;
-  background: url(/public/images/right_icon.svg) no-repeat;
+  background: url(../../public/images/right_icon.svg) no-repeat;
   width: 25px;
   height: 25px;
   background-size: 25px;

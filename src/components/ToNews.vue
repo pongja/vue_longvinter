@@ -24,7 +24,7 @@
           data-aos="zoom-in-up"
           data-aos-duration="1500">
           <img
-            src="../../public/images/portf.jpg"
+            src="../../public/images/board.jpg"
             class="develog_img" />
           <div>
             <p class="dayfont">
@@ -34,7 +34,7 @@
               #3 January. 2023 News
             </p>
             <p class="box_font">
-              Celebrating the new year, test crud for crud is successfully progressing, and we plan to open an official server through the rest api backend in the future.
+              Celebrating the new year, the test CRUD for the bulletin board is successfully progressing, and we plan to open an official server through the Rest api backend in the future.
             </p>
           </div>
         </div>
@@ -53,7 +53,7 @@
               #2 December. 2022 News
             </p>
             <p class="box_font">
-              There is a problem that the server cannot be maintained due to the unstable server caused by DDoS.
+              Due to the image size, the image loading time was slow, so we improved the image loading time by resizing all images, and slightly improved the overall homepage performance.
             </p>
           </div>
         </div>
@@ -72,7 +72,7 @@
               #1 December. 2022 News
             </p>
             <p class="box_font">
-              There is a problem that the server cannot be maintained due to the unstable server caused by DDoS.
+              There is a problem that the Long-vinter server cannot be maintained due to the unstable server caused by DDoS.
             </p>
           </div>
         </div>
