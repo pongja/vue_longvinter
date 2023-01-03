@@ -9,52 +9,48 @@
       </div>
     </div>
     <div class="container notice_container">
-      <div class="wright_wrap">
-        <div class="ListContainer">
+      <!-- <Sidebar /> -->
+      <div class="notice_write">
+        <div class="wright_wrap">
           <h3 class="box_title">
-            공지사항
+            글 수정
           </h3>
-          <button
-            type="button"
-            class="writing_btn btn_po"
-            @click="NoticeWrite()">
-            글쓰기
-          </button>
-          <table class="box">
-            <thead>
-              <th>제목</th>
-              <th class="th_name">
-                작성자
-              </th>
-              <th class="th_date">
-                날짜
-              </th>
-            </thead>
-            <tbody>
-              <tr>
-                <td
-                  class="td_title">
-                </td>
-                <td class="text_center">
-                </td>
-                <td class="text_center">
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div
-            class="mobile_notice_wrap"
-            style="cursor: pointer;">
-            <ul
-              class="mobi_notice_list">
-              <li>
-                <a class="notice_title"></a>
-                <p class="notice_date">
-                </p>
-                <p class="right_icon"></p>
-              </li>
-            </ul>
-          </div>
+          <form
+            class="form_box"
+            @submit.prevent="fetchEdit">
+            <div class="in_title">
+              <h3 class="sub_title">
+                제목
+              </h3>
+              <textarea
+                v-model="state.form.title"
+                maxlength="100"></textarea>
+            </div>
+            <div class="in_title contents">
+              <h3 class="sub_title">
+                내용
+              </h3>
+              <QuillEditor
+                ref="resetquill"
+                v-model:content="state.form.description"
+                content-type="html"
+                :options="state.form.editorOption"
+                style="height:400px;"
+                theme="snow" />
+            </div>
+            <div class="button_wrap">
+              <button
+                class="writing_btn back_btn"
+                @click="backload()">
+                목록
+              </button>
+              <button
+                class="writing_btn writing_done"
+                type="submit">
+                수정 완료
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -69,18 +65,11 @@
   </div>
 </template>
 <script setup>
-import { useRouter } from 'vue-router'
-const router = useRouter()
-const NoticeWrite = () => {
-  router.push({
-    path: '/Notice/Create',
-  }) 
-}
+
 </script>
 <style scoped>
 @import "~/assets/reset.css";
 @import "~/assets/notice.css";
-
 
 #mainVisual {
     position: relative;

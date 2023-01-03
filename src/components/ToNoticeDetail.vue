@@ -9,51 +9,45 @@
       </div>
     </div>
     <div class="container notice_container">
-      <div class="wright_wrap">
-        <div class="ListContainer">
+      <!-- <Sidebar /> -->
+      <div class="notice_write">
+        <div class="wright_wrap">
           <h3 class="box_title">
-            공지사항
+            커뮤니티
           </h3>
-          <button
-            type="button"
-            class="writing_btn btn_po"
-            @click="NoticeWrite()">
-            글쓰기
-          </button>
-          <table class="box">
-            <thead>
-              <th>제목</th>
-              <th class="th_name">
-                작성자
-              </th>
-              <th class="th_date">
-                날짜
-              </th>
-            </thead>
-            <tbody>
-              <tr>
-                <td
-                  class="td_title">
-                </td>
-                <td class="text_center">
-                </td>
-                <td class="text_center">
-                </td>
-              </tr>
-            </tbody>
-          </table>
           <div
-            class="mobile_notice_wrap"
-            style="cursor: pointer;">
-            <ul
-              class="mobi_notice_list">
-              <li>
-                <a class="notice_title"></a>
-                <p class="notice_date">
-                </p>
-                <p class="right_icon"></p>
-              </li>
-            </ul>
+            class="notice_content_wrap">
+            <div class="notice_top">
+              <p class="notice_title">
+              </p>
+              <div class="notice_sub_title">
+                <p>작성자 : </p>
+              </div>
+              <div class="notice_sub_title">
+                <p>등록일 : </p>
+              </div>
+            </div>
+            <div
+              class="content_box"
+              v-html="form.description">
+            </div>
+          </div>
+          <div class="detail_button_wrap">
+            <button
+              type="button"
+              class="writing_btn back_btn">
+              목록
+            </button>
+            <button
+              type="button"
+              class="writing_btn edit_btn">
+              수정
+            </button>
+            <button
+              type="button"
+              class="writing_btn del_btn">
+              삭제
+            </button>
           </div>
         </div>
       </div>
@@ -69,18 +63,11 @@
   </div>
 </template>
 <script setup>
-import { useRouter } from 'vue-router'
-const router = useRouter()
-const NoticeWrite = () => {
-  router.push({
-    path: '/Notice/Create',
-  }) 
-}
+
 </script>
 <style scoped>
 @import "~/assets/reset.css";
 @import "~/assets/notice.css";
-
 
 #mainVisual {
     position: relative;

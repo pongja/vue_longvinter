@@ -3,6 +3,9 @@ import Home from '~/components/Home.vue'
 import itemPage from '~/components/ToItemPage.vue'
 import News from '~/components/ToNews.vue'
 import Notice from '~/components/Notice.vue'
+import ToNoticeDetail from '~/components/ToNoticeDetail.vue'
+import ToNoticeEdit from '~/components/ToNoticeEdit.vue'
+import NoticeCreate from '~/components/ToNoticeCreate.vue'
 import NotFoundView from '~/components/NotFoundView.vue'
 
 const routes = [
@@ -25,6 +28,22 @@ const routes = [
     path: '/Notice',
     name: 'Notice',
     component: Notice
+  },
+  {
+    path: '/Notice/:id',
+    name: 'noticedetail',
+    component: ToNoticeDetail,
+    props:true
+  },
+  {
+    path: '/Notice/:id/Edit',
+    name: 'noticeEdit',
+    component: ToNoticeEdit
+  },
+  {
+    path: '/Notice/Create',
+    name: 'noticecreate',
+    component: NoticeCreate
   },
   {
     path: '/:pathMatch(.*)*',
