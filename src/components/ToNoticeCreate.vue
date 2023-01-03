@@ -12,7 +12,7 @@
       <div class="notice_write">
         <div class="wright_wrap">
           <h3 class="box_title">
-            공지사항 글쓰기
+            커뮤니티 글쓰기
           </h3>
           <form
             class="form_box"

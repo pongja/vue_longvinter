@@ -12,7 +12,7 @@
       <div class="wright_wrap">
         <div class="ListContainer">
           <h3 class="box_title">
-            공지사항
+            커뮤니티
           </h3>
           <button
             type="button"
