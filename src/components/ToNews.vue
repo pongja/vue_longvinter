@@ -28,10 +28,29 @@
             class="develog_img" />
           <div>
             <p class="dayfont">
+              <span class="dayfont_span">Tuesday 3</span>
+            </p>
+            <p class="month_font">
+              #3 January. 2023 News
+            </p>
+            <p class="box_font">
+              Celebrating the new year, test crud for crud is successfully progressing, and we plan to open an official server through the rest api backend in the future.
+            </p>
+          </div>
+        </div>
+        <div
+          class="develog_box aos-init"
+          data-aos="zoom-in-up"
+          data-aos-duration="1500">
+          <img
+            src="../../public/images/portf.jpg"
+            class="develog_img" />
+          <div>
+            <p class="dayfont">
               <span class="dayfont_span">Wednesday 28</span>
             </p>
             <p class="month_font">
-              #2 December News
+              #2 December. 2022 News
             </p>
             <p class="box_font">
               There is a problem that the server cannot be maintained due to the unstable server caused by DDoS.
@@ -50,7 +69,7 @@
               <span class="dayfont_span">Tuesday 27</span>
             </p>
             <p class="month_font">
-              #1 December News
+              #1 December. 2022 News
             </p>
             <p class="box_font">
               There is a problem that the server cannot be maintained due to the unstable server caused by DDoS.
