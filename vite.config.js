@@ -8,14 +8,14 @@ export default defineConfig({
       reactivityTransform: true,
     }),
   ],
-  // server: {
-  //   proxy: {
-  //     '/Notice': {
-  //       target: 'https://mockend.com/org/repo/posts',
-  //       changeOrigin: true,
-  //     }
-  //   }
-  // },
+  server: {
+    proxy: {
+      '/posts': {
+        target: 'https://mockend.com/vue_longvinter',
+        changeOrigin: true,
+      }
+    }
+  },
   base: './',
   resolve: {
     alias: [{ find: '~', replacement: `${__dirname}/src` }],

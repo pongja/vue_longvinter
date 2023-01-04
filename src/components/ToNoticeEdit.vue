@@ -107,7 +107,7 @@ const postdata = {
       }
  try{
   if(confirm('수정하시겠습니까?')){
-  await axios.put(`https://mockend.com/org/repo/posts/${id}`,postdata,{
+  await axios.put(`https://mockend.com/vue_longvinter/posts/${id}`,postdata,{
 
         withCredentials:true,   
   })
