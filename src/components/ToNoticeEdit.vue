@@ -107,7 +107,7 @@ const postdata = {
       }
  try{
   if(confirm('수정하시겠습니까?')){
-  await axios.put(`http://localhost:3000/posts/${id}`,postdata,{
+  await axios.put(`https://mockend.com/org/repo/posts/${id}`,postdata,{
 
         withCredentials:true,   
   })
