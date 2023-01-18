@@ -94,7 +94,7 @@ const formCreate = async (id) => {
       }
   try {
     if(confirm('글을 작성하시겠습니까?')) {
-    await axios.post('https://mockend.com/org/repo/posts', data, {
+    await axios.post('https:/localhost:3000/posts', data, {
       withCredentials:true,
       params:{
         id

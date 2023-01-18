@@ -110,7 +110,7 @@ const deletepost =  async () => {
  
  try{
   if (confirm('삭제하시겠습니까?')) {
-    await axios.delete(`https://mockend.com/vue_longvinter/posts/${id}`)
+    await axios.delete(`https://localhost:3000/posts/${id}`)
     .then((res)=>{
     console.log(res.data)
     form.value = res.data

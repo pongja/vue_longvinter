@@ -109,7 +109,7 @@ const posts = computed(() => {
   })
 })
 const fetchPosts = async (params) =>{
-  axios.get('https://mockend.com/vue_longvinter/posts',{
+  axios.get('http://localhost:3000/posts',{
     params: {
       params
     }
